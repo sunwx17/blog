@@ -18,8 +18,8 @@
   
   <entry>
     <title>测试页面 Hello World!</title>
-    <link href="http://yoursite.com/2018/02/07/%E6%B5%8B%E8%AF%95%E9%A1%B5%E9%9D%A2/"/>
-    <id>http://yoursite.com/2018/02/07/测试页面/</id>
+    <link href="http://yoursite.com/posts/f1d891e0/"/>
+    <id>http://yoursite.com/posts/f1d891e0/</id>
     <published>2018-02-06T16:43:45.585Z</published>
     <updated>2018-02-07T04:25:19.372Z</updated>
     
@@ -34,8 +34,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2018/02/06/hello-world/"/>
-    <id>http://yoursite.com/2018/02/06/hello-world/</id>
+    <link href="http://yoursite.com/posts/4a17b156/"/>
+    <id>http://yoursite.com/posts/4a17b156/</id>
     <published>2018-02-06T08:36:28.273Z</published>
     <updated>2018-02-06T08:36:28.274Z</updated>
     
