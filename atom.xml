@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-02-07T04:12:50.903Z</updated>
+  <updated>2018-02-07T04:25:19.372Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,43 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World! sunwx 1</title>
-    <link href="http://yoursite.com/2018/02/07/Hello-World-sunwx-2/"/>
-    <id>http://yoursite.com/2018/02/07/Hello-World-sunwx-2/</id>
-    <published>2018-02-07T04:12:50.901Z</published>
-    <updated>2018-02-07T04:12:50.903Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;���G����&quot;&gt;&lt;a href=&quot;#���G����&quot; class=&quot;headerlink&quot; title=&quot;���Ǵ����&quot;&gt;&lt;/a&gt;���Ǵ����&lt;/h1&gt;&lt;h2 id=&quot;�����б���&quot;&gt;&lt;a href=&quot;#�����б���&quot; class=&quot;headerlink&quot; title=&quot;�����б���&quot;&gt;&lt;/a&gt;�����б���&lt;/h2&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2018/02/07/hello-world-2/"/>
-    <id>http://yoursite.com/2018/02/07/hello-world-2/</id>
-    <published>2018-02-06T16:57:04.114Z</published>
-    <updated>2018-02-07T03:43:12.060Z</updated>
-    
-    <summary type="html">
-    
-      hahaha
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World! sunwx 1</title>
-    <link href="http://yoursite.com/2018/02/07/Hello-World-sunwx-1/"/>
-    <id>http://yoursite.com/2018/02/07/Hello-World-sunwx-1/</id>
+    <title>测试页面 Hello World!</title>
+    <link href="http://yoursite.com/2018/02/07/%E6%B5%8B%E8%AF%95%E9%A1%B5%E9%9D%A2/"/>
+    <id>http://yoursite.com/2018/02/07/测试页面/</id>
     <published>2018-02-06T16:43:45.585Z</published>
-    <updated>2018-02-07T04:16:30.830Z</updated>
+    <updated>2018-02-07T04:25:19.372Z</updated>
     
     <summary type="html">
     
