@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Sun</title>
+  
+  <subtitle>这是一个副标题</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-02-07T16:17:09.101Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>SunWeixiao</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>new</title>
+    <link href="http://yoursite.com/posts/6be34445/"/>
+    <id>http://yoursite.com/posts/6be34445/</id>
+    <published>2018-02-07T16:16:31.000Z</published>
+    <updated>2018-02-07T16:17:09.101Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="这是大标题"><a href="#这是大标题" class="headerlink" title="这是大标题"></a>这是大标题</h1><h2 id="这是中标题"><a href="#这是中标题" class="headerlink" title="这是中标题"></a>这是中标题</h2><a id="more"></a><p>正<strong>文开始</strong><br>换<em>行了</em>吗<br><br>换行了吗\<br></p><hr><p>$$c = d\a = x <em> y ^{a^b} + \frac{1}{a} / \sqrt{q} + \cdots + \sum\limits_{k=1}^n{a_kn} + \int<em>0^1 f(x)dx + \underbrace{(1 + 2 + \cdots + n)}</em>{ｎ个} + \vec a </em> \alpha + \lim\limits_{x\to\infty}g(x)\<br>    \begin{matrix}<br>    1 &amp; x &amp; x^2 \<br>    1 &amp; y &amp; y^2 \<br>    1 &amp; z &amp; z^2 \<br>    \end{matrix}<br>$$<br>$$<br>f(n) =<br>\begin{cases}<br>n/2,  &amp; \text{if $n$ is even} \<br>3n+1, &amp; \text{if $n$ is odd}<br>\end{cases}<br>$$<br>$\left|<br>\begin{array}{lcr}<br>a &amp; b &amp; c \<br>d &amp; e &amp; f<br>\end{array}<br>\right|$  </p><h2 id="二"><a href="#二" class="headerlink" title="二"></a>二</h2><h3 id="三"><a href="#三" class="headerlink" title="三"></a>三</h3><ul><li>圆点<br></li></ul><p><code>高亮</code>测试</p><pre><code>    单行</code></pre><blockquote><p>一</p><blockquote><p>二</p><blockquote><p>三</p></blockquote></blockquote></blockquote><p><a href="https://sunwx17.github.io" target="_blank" rel="noopener">超链接测试</a></p><p>url图片测试<br><img src="https://github.com/sunwx17/picture/raw/master/0.jpg" alt="图片测试"></p><p>代码测试</p><pre><code class="c++">#include &lt;iostream&gt;using namespace std;int main(){    int n, sum = 0;    cin &gt;&gt; n;    for (int i = 0; i &lt; n; i++){        sum += i;    }    cout &lt;&lt; sum;    return 0;}</code></pre><pre><code class="python">import socketdef hhh(){    pass}</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;这是大标题&quot;&gt;&lt;a href=&quot;#这是大标题&quot; class=&quot;headerlink&quot; title=&quot;这是大标题&quot;&gt;&lt;/a&gt;这是大标题&lt;/h1&gt;&lt;h2 id=&quot;这是中标题&quot;&gt;&lt;a href=&quot;#这是中标题&quot; class=&quot;headerlink&quot; title=&quot;这是中标题&quot;&gt;&lt;/a&gt;这是中标题&lt;/h2&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>测试页面 Hello World!</title>
+    <link href="http://yoursite.com/posts/f1d891e0/"/>
+    <id>http://yoursite.com/posts/f1d891e0/</id>
+    <published>2018-02-06T16:43:45.585Z</published>
+    <updated>2018-02-07T15:51:41.874Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="这是大标题"><a href="#这是大标题" class="headerlink" title="这是大标题"></a>这是大标题</h1><h2 id="这是中标题"><a href="#这是中标题" class="headerlink" title="这是中标题"></a>这是中标题</h2><a id="more"></a><p>正文开始<br>换行了吗<br><br>换行了吗\<br></p><h2 id="二"><a href="#二" class="headerlink" title="二"></a>二</h2><h3 id="三"><a href="#三" class="headerlink" title="三"></a>三</h3><ul><li>圆点<br></li></ul><p><code>高亮</code>测试</p><pre><code>    单行</code></pre><blockquote><p>一</p><blockquote><p>二</p><blockquote><p>三</p></blockquote></blockquote></blockquote><p><a href="https://sunwx17.github.io" target="_blank" rel="noopener">超链接测试</a></p><p>url图片测试<br><img src="https://github.com/sunwx17/picture/raw/master/0.jpg" alt="图片测试"></p><p>代码测试</p><pre><code class="c++">#include &lt;iostream&gt;using namespace std;int main(){    int n, sum = 0;    cin &gt;&gt; n;    for (int i = 0; i &lt; n; i++){        sum += i;    }    cout &lt;&lt; sum;    return 0;}</code></pre><pre><code class="python">import socketdef hhh(){    pass}</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;这是大标题&quot;&gt;&lt;a href=&quot;#这是大标题&quot; class=&quot;headerlink&quot; title=&quot;这是大标题&quot;&gt;&lt;/a&gt;这是大标题&lt;/h1&gt;&lt;h2 id=&quot;这是中标题&quot;&gt;&lt;a href=&quot;#这是中标题&quot; class=&quot;headerlink&quot; title=&quot;这是中标题&quot;&gt;&lt;/a&gt;这是中标题&lt;/h2&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
