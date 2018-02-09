@@ -239,7 +239,7 @@
 
     
         <meta property="article:published_time" content="Thu Feb 08 2018 00:16:31 GMT+0800">
-        <meta property="article:modified_time" content="Thu Feb 08 2018 00:17:09 GMT+0800">
+        <meta property="article:modified_time" content="Fri Feb 09 2018 13:33:42 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "http://yoursite.com/posts/6be34445/index.html",
     "headline": "new",
     "datePublished": "Thu Feb 08 2018 00:16:31 GMT+0800",
-    "dateModified": "Thu Feb 08 2018 00:17:09 GMT+0800",
+    "dateModified": "Fri Feb 09 2018 13:33:42 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "SunWeixiao",
@@ -302,8 +302,54 @@
     
     
 
-    <!-- Custom Head --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    <!-- Custom Head -->
     
+
+    <!-- my MathJax -->
+<link rel="dns-prefetch" href="//cdn.bootcss.com" />
+<link rel="dns-prefetch" href="//cdn.mathjax.org" />
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [
+                ['$', '$'],
+                ['\\(', '\\)']
+            ],
+            displayMath: [
+                ['$$', '$$'],
+                ["\\[", "\\]"]
+            ],
+            processEscapes: true
+        },
+        TeX: {
+            extensions: ["AMSmath.js", "AMSsymbols.js"],
+            equationNumbers: {
+                autoNumber: ["AMS"],
+                useLabelIds: true
+            },
+            Macros: {
+                hfill: "{}"
+            }
+        },
+        "HTML-CSS": {
+            linebreaks: {
+                automatic: true
+            },
+            availableFonts: ["TeX"],
+            scale: 110
+        },
+        SVG: {
+            linebreaks: {
+                automatic: true
+            }
+        }
+    });
+</script>
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
 
 </head>
 
@@ -489,8 +535,7 @@
     
         <h1 id="这是大标题"><a href="#这是大标题" class="headerlink" title="这是大标题"></a>这是大标题</h1><h2 id="这是中标题"><a href="#这是中标题" class="headerlink" title="这是中标题"></a>这是中标题</h2><a id="more"></a>
 <p>正<strong>文开始</strong><br>换<em>行了</em>吗<br><br>换行了吗\<br></p>
-<hr>
-<p>$$c = d\a = x <em> y ^{a^b} + \frac{1}{a} / \sqrt{q} + \cdots + \sum\limits_{k=1}^n{a_kn} + \int<em>0^1 f(x)dx + \underbrace{(1 + 2 + \cdots + n)}</em>{ｎ个} + \vec a </em> \alpha + \lim\limits_{x\to\infty}g(x)\<br>    \begin{matrix}<br>    1 &amp; x &amp; x^2 \<br>    1 &amp; y &amp; y^2 \<br>    1 &amp; z &amp; z^2 \<br>    \end{matrix}<br>$$<br>$$<br>f(n) =<br>\begin{cases}<br>n/2,  &amp; \text{if $n$ is even} \<br>3n+1, &amp; \text{if $n$ is odd}<br>\end{cases}<br>$$<br>$\left|<br>\begin{array}{lcr}<br>a &amp; b &amp; c \<br>d &amp; e &amp; f<br>\end{array}<br>\right|$  </p>
+<p><br>$a = b + c$<br>$$c = d\\a = x \times y ^{a^b} + \frac{1}{a} / \sqrt{q} + \cdots + \sum\limits_{k=1}^n{a_kn} + \int_0^1 f(x)dx + \underbrace{(1 + 2 + \cdots + n)}_{ｎ个} + \vec a \cdot \alpha + \lim\limits_{x\to\infty}g(x)\\<br>    \begin{matrix}<br>    1 &amp; x &amp; x^2 \\<br>    1 &amp; y &amp; y^2 \\<br>    1 &amp; z &amp; z^2 \\<br>    \end{matrix}$$<br>$$f(n) =<br>\begin{cases}<br>n/2,  &amp; \text{if $n$ is even} \\<br>3n+1, &amp; \text{if $n$ is odd}<br>\end{cases}<br>$$<br>$\left|<br>\begin{array}{lcr}<br>a &amp; b &amp; c \\<br>d &amp; e &amp; f<br>\end{array}<br>\right|$  </p>
 <h2 id="二"><a href="#二" class="headerlink" title="二"></a>二</h2><h3 id="三"><a href="#三" class="headerlink" title="三"></a>三</h3><ul>
 <li>圆点<br></li>
 </ul>
@@ -1035,24 +1080,7 @@ console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viose
 </script>
 
                 </main>
-            </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
+            </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
         </body>
     
 </html>
