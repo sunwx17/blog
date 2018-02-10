@@ -244,6 +244,11 @@ a {
     margin-top: 0;
     margin-bottom: 0;
 }
+#ol ul {
+    list-style: none;
+    margin: 0px;
+}
+
 #post-content dl {
     padding: 0;
 }
@@ -871,8 +876,8 @@ a {
     width: 98%
 }
 #scheme-Paradox #post-content {
-    max-width: 90%;
-    margin: 1pc auto;
+    max-width: 96%;
+    margin: 1pc;
     padding-top: 0;
 }
 #scheme-Paradox #post-content img {
