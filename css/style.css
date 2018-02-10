@@ -17,6 +17,11 @@
 
 html {
     display: block;
+    font-family: 'iosevka', '微软雅黑';
+}
+body, html {
+    font-family: 'iosevka', '微软雅黑';
+    overflow-x: hidden !important;
 }
 body {
     display: block;
@@ -33,6 +38,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
     content: '';
+    font-family: 'iosevka', '微软雅黑';
 }
 .fa,
 .material-icons {
@@ -495,8 +501,8 @@ a {
     background-repeat: no-repeat
 }
 #scheme-Paradox .post_entry-module {
-    margin-bottom: 47.59px;
-    margin-top: 0;
+    margin-bottom: 6px;
+    margin-top: 6px;
 }
 #scheme-Paradox .material-layout .material-post,
 #scheme-Paradox .material-layout .material-index {
@@ -509,7 +515,7 @@ a {
 }
 #scheme-Paradox .material-layout .material-layout__content {
     position: relative;
-    padding-top: 165px;
+    padding-top: 100px;
     margin: 0 auto;
     width: 100%;
 }
@@ -520,10 +526,11 @@ a {
 }
 #scheme-Paradox .material-layout .mdl-card {
     display: flex;
-    min-height: 400px;
+    min-height: 380px;
     flex-direction: column;
     align-items: stretch;
-    border-radius: 2px;
+    border-radius: 3px;
+    background: hsla(0, 0%, 95%, 0.6);
 }
 @media screen and (max-width: 480px) {
     #scheme-Paradox .material-post .mdl-card {
@@ -548,11 +555,17 @@ a {
 #scheme-Paradox .material-layout .mdl-card__title a {
     color: inherit
 }
+#scheme-Paradox .material-layout .mdl-card__supporting-text a {
+    color: inherit;
+}
+#scheme-Paradox .material-layout .mdl-card__actions a {
+    color: inherit;
+}
 #scheme-Paradox .material-layout .mdl-card__supporting-text {
     display: inline;
     padding: 20px 0 1pc;
     width: 100%;
-    min-height: 4pc;
+    min-height: 3.8pc;
     align-items: center
 }
 #scheme-Paradox .material-layout .mdl-card__supporting-text strong {
@@ -843,10 +856,9 @@ a {
 }
 #scheme-Paradox .mdl-mini-footer {
     box-sizing: border-box;
-    margin-top: 5pc;
-    padding: 40px;
-    height: 120px;
-    background-color: #fff;
+    padding: 10px;
+    height: 60px;
+    background-color: hsla(0,0%,100%,.0);
     align-items: center
 }
 @media screen and (max-width: 840px) {
@@ -920,7 +932,7 @@ a {
 }
 #scheme-Paradox #post_entry-left-info {
     float: left;
-    width: 50%
+    width: 100%
 }
 #scheme-Paradox #post_entry-right-info {
     float: right;
@@ -933,7 +945,7 @@ a {
 }
 @media screen and (max-width: 480px) {
     #scheme-Paradox #post_entry-left-info {
-        padding: 1pc 4%
+        padding: 0pc
     }
     #scheme-Paradox #post_entry-right-info {
         margin-top: 0;
@@ -943,6 +955,12 @@ a {
         text-align: right;
         top: 21px
     }
+}
+#scheme-Paradox #post_entry-left-info a {
+    color: #9e9e9e;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 0px;
 }
 #scheme-Paradox #post_entry-right-info a {
     text-decoration: none;
@@ -1244,8 +1262,8 @@ a {
 #scheme-Isolation .post_entry-module {
     margin-bottom: 24px;
     width: 100%;
-    border-radius: 2px;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+    border-radius: 4px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .1);
     -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
 }
 @media screen and (min-width: 386px) {
@@ -2436,8 +2454,7 @@ a {
     transform: translate(-64px, 0);
 }
 #back-to-top.btt-docked{
-    position: absolute;
-    bottom: 100px;
+    transform: translate(-64px, 0);
 }
 @media screen and (max-width: 840px) {
     #back-to-top{
@@ -2447,8 +2464,7 @@ a {
         transform: translate(-60px, 0);
     }
     #back-to-top.btt-docked{
-        position: absolute;
-        bottom: 180px;
+        transform: translate(-60px, 0);
     }
 }
 .toTop {
@@ -2713,4 +2729,8 @@ a {
 
 .footer-sns-v2ex {
     background: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48"><path d="M6.5,3.7H24c14.4,0,17.2,0,17.4,0.2c0.8,0.5,1.4,0.7,1.9,1.4c0.5,0.8,0.7,1.2,0.8,2v33.4l-0.5,1.5c-0.5,1.1-1.1,1.4-2.2,1.9 c-0.3,0.2-2.2,0.3-5.7,0.3H7.4c-0.8-0.2-1.4-0.4-2.1-0.8c-0.8-0.6-0.8-1-1.4-2V6.7c0-0.5,0.7-1.5,1.2-1.9c0.3-0.3,1.1-1,1.7-1.2H6.5 z M14.3,13c-0.5,0.2-0.8,0.3-0.8,0.5c-0.2,0-0.3,0.4-0.6,0.8v5.9l13.2,0.2l3.6,3.2v0.7l-3.6,3.4H12.9v5.9c0,0.4,0.3,0.7,0.5,0.8 c0.3,0.3,0.5,0.5,0.8,0.5h13.7c0.3,0,0.5,0,0.7-0.2c0.2,0,0.3-0.2,0.6-0.4l9.6-9.3l0.3-0.6v-1.2l-0.3-0.7l-9.6-9.1l-0.6-0.3L27.9,13 H14.3L14.3,13z"/></svg>');
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }
