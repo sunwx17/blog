@@ -5,9 +5,9 @@
   <subtitle>这是一个副标题</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://sunweixiao.com/"/>
   <updated>2018-02-11T09:38:27.250Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://sunweixiao.com/</id>
   
   <author>
     <name>SunWeixiao</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>P站图片爬虫 Pixiv-Spider</title>
-    <link href="http://yoursite.com/posts/7/"/>
-    <id>http://yoursite.com/posts/7/</id>
+    <link href="http://sunweixiao.com/posts/7/"/>
+    <id>http://sunweixiao.com/posts/7/</id>
     <published>2018-02-09T06:37:22.697Z</published>
     <updated>2018-02-11T09:38:27.250Z</updated>
     
@@ -31,15 +31,15 @@
     
     </summary>
     
-      <category term="随想集" scheme="http://yoursite.com/categories/thinking/"/>
+      <category term="随想集" scheme="http://sunweixiao.com/categories/thinking/"/>
     
     
   </entry>
   
   <entry>
     <title>新看板娘 Tia の改造记事</title>
-    <link href="http://yoursite.com/posts/6/"/>
-    <id>http://yoursite.com/posts/6/</id>
+    <link href="http://sunweixiao.com/posts/6/"/>
+    <id>http://sunweixiao.com/posts/6/</id>
     <published>2018-02-07T16:16:31.000Z</published>
     <updated>2018-02-11T09:38:17.388Z</updated>
     
@@ -51,15 +51,15 @@
     
     </summary>
     
-      <category term="笔记本" scheme="http://yoursite.com/categories/notebook/"/>
+      <category term="笔记本" scheme="http://sunweixiao.com/categories/notebook/"/>
     
     
   </entry>
   
   <entry>
     <title>Vim 哲思</title>
-    <link href="http://yoursite.com/posts/1/"/>
-    <id>http://yoursite.com/posts/1/</id>
+    <link href="http://sunweixiao.com/posts/1/"/>
+    <id>http://sunweixiao.com/posts/1/</id>
     <published>2018-02-07T16:00:00.000Z</published>
     <updated>2018-02-11T09:36:20.398Z</updated>
     
@@ -71,19 +71,19 @@
     
     </summary>
     
-      <category term="技术向" scheme="http://yoursite.com/categories/technology/"/>
+      <category term="技术向" scheme="http://sunweixiao.com/categories/technology/"/>
     
     
-      <category term="java" scheme="http://yoursite.com/tags/java/"/>
+      <category term="java" scheme="http://sunweixiao.com/tags/java/"/>
     
-      <category term="数据库" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+      <category term="数据库" scheme="http://sunweixiao.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
   </entry>
   
   <entry>
     <title>RN App 唤醒踩坑记</title>
-    <link href="http://yoursite.com/posts/2/"/>
-    <id>http://yoursite.com/posts/2/</id>
+    <link href="http://sunweixiao.com/posts/2/"/>
+    <id>http://sunweixiao.com/posts/2/</id>
     <published>2018-02-07T06:19:06.000Z</published>
     <updated>2018-02-11T09:37:37.203Z</updated>
     
@@ -95,19 +95,19 @@
     
     </summary>
     
-      <category term="自言语" scheme="http://yoursite.com/categories/tomyself/"/>
+      <category term="自言语" scheme="http://sunweixiao.com/categories/tomyself/"/>
     
     
-      <category term="标签0" scheme="http://yoursite.com/tags/%E6%A0%87%E7%AD%BE0/"/>
+      <category term="标签0" scheme="http://sunweixiao.com/tags/%E6%A0%87%E7%AD%BE0/"/>
     
-      <category term="标签1" scheme="http://yoursite.com/tags/%E6%A0%87%E7%AD%BE1/"/>
+      <category term="标签1" scheme="http://sunweixiao.com/tags/%E6%A0%87%E7%AD%BE1/"/>
     
   </entry>
   
   <entry>
     <title>本地文件插入测试</title>
-    <link href="http://yoursite.com/posts/5/"/>
-    <id>http://yoursite.com/posts/5/</id>
+    <link href="http://sunweixiao.com/posts/5/"/>
+    <id>http://sunweixiao.com/posts/5/</id>
     <published>2018-02-07T06:01:12.000Z</published>
     <updated>2018-02-11T09:38:04.568Z</updated>
     
@@ -127,8 +127,8 @@
   
   <entry>
     <title>草稿</title>
-    <link href="http://yoursite.com/posts/4/"/>
-    <id>http://yoursite.com/posts/4/</id>
+    <link href="http://sunweixiao.com/posts/4/"/>
+    <id>http://sunweixiao.com/posts/4/</id>
     <published>2018-02-07T05:37:41.000Z</published>
     <updated>2018-02-11T09:37:47.777Z</updated>
     
@@ -149,8 +149,8 @@
   
   <entry>
     <title>测试页面 Hello World!</title>
-    <link href="http://yoursite.com/posts/3/"/>
-    <id>http://yoursite.com/posts/3/</id>
+    <link href="http://sunweixiao.com/posts/3/"/>
+    <id>http://sunweixiao.com/posts/3/</id>
     <published>2018-02-06T16:43:45.585Z</published>
     <updated>2018-02-11T09:37:02.818Z</updated>
     
