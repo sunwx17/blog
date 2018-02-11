@@ -2768,3 +2768,8 @@ textarea.gt-header-textarea {
     background-color: rgba(246, 249, 254, 0.6)!important;
     border-radius: 3px;
 }
+
+.gt-container .gt-comment-content:hover {
+  -webkit-box-shadow: 0 0.3em 1.8em 0 #f4f4f4!important;
+          box-shadow: 0 0.3em 1.8em 0 #f4f4f4!important;
+}
