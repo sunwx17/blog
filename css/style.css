@@ -2755,3 +2755,16 @@ pre.prettyprint.linenums.prettyprinted{
     background: rgba(0,0,0,0.06)!important;
     box-shadow: rgb(153, 153, 153) 0px 11px 8px -10px inset, rgb(153, 153, 153) 0px -11px 8px -10px inset;
 }
+
+textarea.gt-header-textarea {
+    background-color: rgba(246, 246, 246, 0.6);
+}
+
+.gt-container .gt-comment-admin .gt-comment-content {
+    background-color: rgba(246, 249, 254, 0.6);
+}
+
+.gt-container .gt-comment-content{
+    background-color: rgba(246, 249, 254, 0.6);
+    border-radius: 3px;
+}
