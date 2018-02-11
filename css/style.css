@@ -2757,14 +2757,14 @@ pre.prettyprint.linenums.prettyprinted{
 }
 
 textarea.gt-header-textarea {
-    background-color: rgba(246, 246, 246, 0.6);
+    background-color: rgba(246, 246, 246, 0.6)!important;
 }
 
 .gt-container .gt-comment-admin .gt-comment-content {
-    background-color: rgba(246, 249, 254, 0.6);
+    background-color: rgba(246, 249, 254, 0.6)!important;
 }
 
 .gt-container .gt-comment-content{
-    background-color: rgba(246, 249, 254, 0.6);
+    background-color: rgba(246, 249, 254, 0.6)!important;
     border-radius: 3px;
 }
