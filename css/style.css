@@ -17,10 +17,10 @@
 
 html {
     display: block;
-    font-family: 'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif'
+    font-family: 'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';
 }
 body, html {
-    font-family: 'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif'
+    font-family: 'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';
     overflow-x: hidden !important;
 }
 body {
@@ -38,7 +38,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
     content: '';
-    font-family: 'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif'
+    font-family: 'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';
     text-shadow: 0 0 1px rgba(0, 0, 0, .1);
 }
 .fa,
@@ -49,7 +49,7 @@ a {
     font-weight: 300;
 }
 .mdl-button {
-    font-family: 'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif'
+    font-family: 'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';
 }
 .mdl-menu__item {
     font-weight: 300;
