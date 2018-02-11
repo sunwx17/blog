@@ -17,10 +17,10 @@
 
 html {
     display: block;
-    font-family: 'iosevka', '微软雅黑';
+    font-family: 'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif'
 }
 body, html {
-    font-family: 'iosevka', '微软雅黑';
+    font-family: 'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif'
     overflow-x: hidden !important;
 }
 body {
@@ -38,7 +38,8 @@ body {
     background-size: cover;
     background-attachment: fixed;
     content: '';
-    font-family: 'iosevka', '微软雅黑';
+    font-family: 'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif'
+    text-shadow: 0 0 1px rgba(0, 0, 0, .1);
 }
 .fa,
 .material-icons {
@@ -48,7 +49,7 @@ a {
     font-weight: 300;
 }
 .mdl-button {
-    font-family: Roboto, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+    font-family: 'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif'
 }
 .mdl-menu__item {
     font-weight: 300;
@@ -107,9 +108,12 @@ a {
 }
 #post-content,
 #post-content p {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.7;
     overflow: hidden;
+    padding: 12px 16px 0px;
+    margin: 0px;
+    font-weight: 400;
 }
 #post-content>*:first-child {
     margin-top: 0 !important;
@@ -138,7 +142,7 @@ a {
 #post-content h6 {
     margin: 1em 0 15px;
     padding: 0;
-    font-weight: bold;
+    font-weight: 500;
     line-height: 1.7;
     cursor: text;
     position: relative;
@@ -191,11 +195,15 @@ a {
     border-bottom: 1px solid #ddd;
 }
 #post-content h2 {
-    font-size: 2em;
-    border-bottom: 1px solid #eee;
+    font-family: 'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';
+    font-size: 1.7rem;
+    border-bottom: 1px dashed rgba(0,0,0,.2);
+    margin: 12px 16px;
+    font-weight: 400;
+    padding: 5px 0px;
 }
 #post-content h3 {
-    font-size: 1.5em;
+    font-size: 1.4rem;
 }
 #post-content h4 {
     font-size: 1.2em;
@@ -213,7 +221,7 @@ a {
 #post-content ol,
 #post-content dl,
 #post-content table {
-    margin: 15px 0;
+    margin: 0;
 }
 #post-content hr {
     height: 0.25em;
@@ -381,8 +389,10 @@ a {
 #post-content tt {
     margin: 0 2px;
     padding: 0px 5px;
-    background-color: rgba(0, 0, 0, 0.04);
+    background-color: rgba(0, 0, 0, 0.1);
     border-radius: 3px;
+    font-family: 'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';
+    color: #e16b8c;
 }
 #post-content pre>code {
     margin: 0;
@@ -714,7 +724,7 @@ a {
     font-weight: inherit
 }
 #scheme-Paradox .material-layout .mdl-card h3 {
-    margin: 0
+    margin: 12px 16px -8px;
 }
 #scheme-Paradox .material-layout .mdl-card h1 a,
 #scheme-Paradox .material-layout .mdl-card h2 a,
@@ -876,12 +886,13 @@ a {
     width: 98%
 }
 #scheme-Paradox #post-content {
-    max-width: 96%;
-    margin: 1pc;
+    max-width: 100%;
+    margin: 0px;
     padding-top: 0;
 }
 #scheme-Paradox #post-content img {
-    max-width: 100%
+    max-width: calc(100% + 32px);
+    margin-left: -16px;
 }
 #scheme-Paradox .page-navigator {
     display: inline-block;
@@ -2738,4 +2749,9 @@ a {
 
 html::-webkit-scrollbar {
   display: none;
+}
+pre.prettyprint.linenums.prettyprinted{
+    padding: 16px 0px!important;
+    background: rgba(0,0,0,0.06)!important;
+    box-shadow: rgb(153, 153, 153) 0px 11px 8px -10px inset, rgb(153, 153, 153) 0px -11px 8px -10px inset;
 }
