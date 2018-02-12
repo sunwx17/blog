@@ -76,7 +76,7 @@
     <!-- Import CSS -->
     
         <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?D6hjv31W+IVw/OMyTb4mHQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?rpQqJdoX3bHUm8N2h+jcOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?1uNAbY4eO8xpvhxp2Vc8oQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
         
             
@@ -161,8 +161,9 @@
 <!-- Theme Background Related-->
 
     <style>
-      body{
-        background-image: url(/img/bg.jpg);
+      body::before{
+        z-index: -1;
+        background: rgba(255,255,255,.5);
       }
     </style>
 
@@ -333,7 +334,27 @@
     
 </script>
 <!--fontawesome-->
-<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+<!--jquery-->
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js">
+</script>
+<!--query.backstretch-->  
+<script src="https://cdn.bootcss.com/jquery-backstretch/2.0.4/jquery.backstretch.min.js">
+</script>
+  
+<script type="text/javascript" src="/js/pjax.js">
+</script>
+  
+ <script>
+$(function () {
+            $.backstretch([
+                  "https://dn-coding-net-production-pp.qbox.me/d96a4494-5fe7-4417-9ff4-bf9fdb5714cd.jpg", "https://dn-coding-net-production-pp.qbox.me/8f0ada95-fa8e-41a0-a6cf-a3d54dfd29fb.jpg", "https://dn-coding-net-production-pp.qbox.me/43b04f6d-090f-419e-82d4-bd9fc0c9b2aa.jpg", "https://dn-coding-net-production-pp.qbox.me/2720527c-3c7f-4851-9269-41b910dd3ba8.jpg", "https://dn-coding-net-production-pp.qbox.me/a2bf66ed-7221-47b2-becb-9b7544353522.jpg", "https://dn-coding-net-production-pp.qbox.me/3f90e634-4738-435b-b654-303bff9eb2c9.jpg", "https://dn-coding-net-production-pp.qbox.me/a1649947-a5ac-4a9a-97a2-e030344f6e25.jpg", "https://dn-coding-net-production-pp.qbox.me/a1ec70b9-7a44-4485-8541-056c14af6c43.jpg", "https://dn-coding-net-production-pp.qbox.me/f0b596a6-b3d8-4cff-95fb-a3f21dbcd833.jpg", "https://dn-coding-net-production-pp.qbox.me/44815347-b667-4ef0-bacd-5d971ed524e1.jpg"
+            ], { duration: 10000, fade: 1000,animateFirst: !1 });
+        });
+ </script>
+  <script>
+    $(document).pjax('a[target!=_blank]', '#material-index mdl-grid', {fragment:'#material-index mdl-grid', timeout:8000});
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 
 </head>
@@ -372,7 +393,7 @@
         
             
                 <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--6dp mdl-cell mdl-cell--6-col fade out style="height:360px;"">
+                <div class="post_entry-module mdl-card mdl-shadow--6dp mdl-cell mdl-cell--6-col fade out" style="height:360px;">
     <!-- Post Thumbnail -->
     
         <!-- Custom Thumbnail -->
@@ -421,7 +442,6 @@
         </div>
     </div>
 </div>
-
             
             
         
@@ -429,7 +449,7 @@
         
             
                 <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--6dp mdl-cell mdl-cell--6-col fade out style="height:360px;"">
+                <div class="post_entry-module mdl-card mdl-shadow--6dp mdl-cell mdl-cell--6-col fade out" style="height:360px;">
     <!-- Post Thumbnail -->
     
         <!-- Custom Thumbnail -->
@@ -478,7 +498,6 @@
         </div>
     </div>
 </div>
-
             
             
         
@@ -486,7 +505,7 @@
         
             
                 <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--6dp mdl-cell mdl-cell--6-col fade out style="height:360px;"">
+                <div class="post_entry-module mdl-card mdl-shadow--6dp mdl-cell mdl-cell--6-col fade out" style="height:360px;">
     <!-- Post Thumbnail -->
     
         <!-- Custom Thumbnail -->
@@ -542,7 +561,6 @@
         </div>
     </div>
 </div>
-
             
             
         
@@ -550,7 +568,7 @@
         
             
                 <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--6dp mdl-cell mdl-cell--6-col fade out style="height:360px;"">
+                <div class="post_entry-module mdl-card mdl-shadow--6dp mdl-cell mdl-cell--6-col fade out" style="height:360px;">
     <!-- Post Thumbnail -->
     
         <!-- Custom Thumbnail -->
@@ -606,7 +624,6 @@
         </div>
     </div>
 </div>
-
             
             
         
