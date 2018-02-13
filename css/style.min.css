@@ -2859,3 +2859,24 @@ body::before {
     /*transform: translate(-420px, 0);*/
     right: 0;
 }
+* {
+    cursor: url("/image/cursur/Arrow.cur"),auto!important
+}
+a,button {
+    cursor: url("/image/cursur/Help.cur"),auto!important
+}
+.mdl-button{
+    cursor: url("/image/cursur/Help.cur"),auto!important
+}
+.mdl-button__ripple-container{
+    cursor: url("/image/cursur/Help.cur"),auto!important
+}
+.my_button{
+    cursor: url("/image/cursur/Help.cur"),auto!important
+}
+:active{
+    cursor: url("/image/cursur/Hand.cur"),auto!important
+}
+:visited{
+    cursor: url("/image/cursur/Help.cur"),auto!important
+}
