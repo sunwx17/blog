@@ -369,28 +369,16 @@ $(document).ready(function(){
 })
 </script>-->
   <script>
-    function sleep(numberMillis) { 
-var now = new Date(); 
-var exitTime = now.getTime() + numberMillis; 
-while (true) { 
-now = new Date(); 
-if (now.getTime() > exitTime) 
-return; 
-} 
-}
-    
-    
-    
-    
     document.addEventListener("click",function(e){
         console.log(e.target);
         var x = e.target.getAttribute('link');
         var y = e.target.getAttribute('href');
-        if(true){
-            e.preventDefault();
+        if(y){
+            if(y[0] == '/'){
+                e.preventDefault();
+            }
         }
         if(x){
-            setTimeout(
             $.ajax({  
             url:x,  
             type:'get',  
@@ -398,38 +386,84 @@ return;
             dataType:'html',
             beforeSend: function () {  
                 $('#ajax_change2').remove();
-                $("#ajax_change1").append('<div id="pload" style="position:fixed;top:30%;z-index:1200;background:url(https://dn-coding-net-production-pp.qbox.me/06b36bf5-4fda-4afb-afcb-80700df05834.gif) top center no-repeat;width:100%;height:140px;margin:auto auto;"></div>');  
-                                sleep(1100);
+                $("#ajax_change1").append('<div id="pload" style="position:fixed;top:30%;z-index:1200;background:url(https://dn-coding-net-production-pp.qbox.me/06b36bf5-4fda-4afb-afcb-80700df05834.gif) top center no-repeat;width:100%;height:500px;margin:auto auto;"></div>');  
             },  
             complete: function () {  
-                            sleep(1100);
                 $("#pload").remove();  
                 
             },  
             success:function(result){  
                 var doc = (new DOMParser()).parseFromString(result,"text/html");
                 var k = doc.getElementById("ajax_change2");
+                var new_title = doc.title;
+                document.title = new_title;
                 console.log(doc);
                 console.log(k);
                 $("#ajax_change1").append(k);
-                sleep(1100);
+                var state = {url:x, title: new_title};
+                window.history.pushState(state, new_title, x);
             }  
             })
-            ,1000);
-            
-            
-            
-  
-  
-  
         }
-        else if(y){
-            $('#ajax_change1').load(y + ' #ajax_change2',function(response,status){
-                alert(status);  
+        else if(y != '#' && y[0] == '/'){
+            $.ajax({  
+            url:y,  
+            type:'get',  
+            async:true,
+            dataType:'html',
+            beforeSend: function () {  
+                $('#ajax_change2').remove();
+                $("#ajax_change1").append('<div id="pload" style="position:fixed;top:30%;z-index:1200;background:url(https://dn-coding-net-production-pp.qbox.me/06b36bf5-4fda-4afb-afcb-80700df05834.gif) top center no-repeat;width:100%;height:300px;margin:auto auto;"></div>');  
+            },  
+            complete: function () {  
+                $("#pload").remove();  
+                
+            },  
+            success:function(result){  
+                var doc = (new DOMParser()).parseFromString(result,"text/html");
+                var k = doc.getElementById("ajax_change2");
+                var new_title = doc.title;
+                document.title = new_title;
+                console.log(doc);
+                console.log(k);
+                $("#ajax_change1").append(k);
+                var state = {url:y, title: new_title};
+                window.history.pushState(state, new_title, y);
+            }  
             })
         }
         return false;
     })
+    
+$(document).ready(function(){
+  $(window).on('popstate', function (e) {
+          console.log(e);
+          var y = e.target.document.url;
+          var new_title = e.target.document.title;
+          document.title = new_title;
+          $.ajax({  
+          url:y,  
+          type:'get',  
+          async:true,
+          dataType:'html',
+          beforeSend: function () {  
+              $('#ajax_change2').remove();
+              $("#ajax_change1").append('<div id="pload" style="position:fixed;top:30%;z-index:1200;background:url(https://dn-coding-net-production-pp.qbox.me/06b36bf5-4fda-4afb-afcb-80700df05834.gif) top center no-repeat;width:100%;height:300px;margin:auto auto;"></div>');  
+          },  
+          complete: function () {  
+              $("#pload").remove();  
+              
+          },  
+          success:function(result){  
+              var doc = (new DOMParser()).parseFromString(result,"text/html");
+              var k = doc.getElementById("ajax_change2");
+              console.log(doc);
+              console.log(k);
+              $("#ajax_change1").append(k);
+            }  
+            })
+  })
+})
 </script>
 <!--
 <script>
