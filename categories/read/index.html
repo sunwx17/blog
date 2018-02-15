@@ -331,19 +331,126 @@ $(function () {
 </script>
 <!--pjax-->
   <script type="text/javascript" src="/js/jquery.pjax.js">
+    
+  
+</script><!--
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#cb").click(function(){
+    $('#ajax_change1').load('/page/2 #ajax_change2',function(response,status){
+      if (status=="success")
+      {
+      alert("111")
+      }
+      })
+  })
+})
+</script>-->
+  <script>
+    function sleep(numberMillis) { 
+var now = new Date(); 
+var exitTime = now.getTime() + numberMillis; 
+while (true) { 
+now = new Date(); 
+if (now.getTime() > exitTime) 
+return; 
+} 
+}
+    
+    
+    
+    
+    document.addEventListener("click",function(e){
+        console.log(e.target);
+        var x = e.target.getAttribute('link');
+        var y = e.target.getAttribute('href');
+        if(true){
+            e.preventDefault();
+        }
+        if(x){
+            setTimeout(
+            $.ajax({  
+            url:x,  
+            type:'get',  
+            async:true,
+            dataType:'html',
+            beforeSend: function () {  
+                $('#ajax_change2').remove();
+                $("#ajax_change1").append('<div id="pload" style="position:fixed;top:30%;z-index:1200;background:url(https://dn-coding-net-production-pp.qbox.me/06b36bf5-4fda-4afb-afcb-80700df05834.gif) top center no-repeat;width:100%;height:140px;margin:auto auto;"></div>');  
+                                sleep(1100);
+            },  
+            complete: function () {  
+                            sleep(1100);
+                $("#pload").remove();  
+                
+            },  
+            success:function(result){  
+                var doc = (new DOMParser()).parseFromString(result,"text/html");
+                var k = doc.getElementById("ajax_change2");
+                console.log(doc);
+                console.log(k);
+                $("#ajax_change1").append(k);
+                sleep(1100);
+            }  
+            })
+            ,1000);
+            
+            
+            
+  
+  
+  
+        }
+        else if(y){
+            $('#ajax_change1').load(y + ' #ajax_change2',function(response,status){
+                alert(status);  
+            })
+        }
+        return false;
+    })
 </script>
-  <script type="text/javascript">
-	$.pjax({
-		selector: 'a',
-		container: '#main', //内容替换的容器
-		show: 'fade',  //展现的动画，支持默认和fade, 可以自定义动画方式，这里为自定义的function即可。
-		cache: true,  //是否使用缓存
-		storage: true,  //是否使用本地存储
-		titleSuffix: '', //标题后缀
-		filter: function(){},
-		callback: function(){}
-	})
+<!--
+<script>
+
+
+            $('#ajax_change1').load(x + ' #ajax_change2',function(response,status){
+                alert(111);
+  
+            })
+
+
+  function tiaozhuan(x){
+  alert(x);
+              $('#ajax_change1').load(x + ' #ajax_change2',function(response,status){
+            alert(status);
+              if (status=="success")
+              {
+              }
+            })
+  
+  }
+  
+  
   </script>
+  <script type="text/javascript">
+$(document).ready(function(){
+  $(".post_entry-module").click(function(e){
+          console.log(e);
+          e.preventDefault();
+          e.stopPropagation()
+                      var x = e.target.getAttribute('href');
+            alert(x);
+    $('#ajax_change1').load('/page/2 #ajax_change2',function(response,status){
+      if (status=="success")
+      {
+      alert("111")
+      }
+      })
+  })
+})
+</script>-->
+  
+  
   
   
   <!--skplayer-->
@@ -377,8 +484,8 @@ $(function () {
 <!-- Layouts -->
 
     <!-- Post Module -->
-    <div class="material-post_container">
-
+	<div id="ajax_change1">
+    <div class="material-post_container" id="ajax_change2">
         <div class="material-post mdl-grid">
             <div class="mdl-card mdl-cell mdl-cell--12-col" style="background:rgba(0,0,0,0.0);margin:0;">
 
@@ -470,6 +577,7 @@ $(function () {
 </nav>
 
         </div>
+	</div>
     </div>
 
 

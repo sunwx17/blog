@@ -331,19 +331,126 @@ $(function () {
 </script>
 <!--pjax-->
   <script type="text/javascript" src="/js/jquery.pjax.js">
+    
+  
+</script><!--
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#cb").click(function(){
+    $('#ajax_change1').load('/page/2 #ajax_change2',function(response,status){
+      if (status=="success")
+      {
+      alert("111")
+      }
+      })
+  })
+})
+</script>-->
+  <script>
+    function sleep(numberMillis) { 
+var now = new Date(); 
+var exitTime = now.getTime() + numberMillis; 
+while (true) { 
+now = new Date(); 
+if (now.getTime() > exitTime) 
+return; 
+} 
+}
+    
+    
+    
+    
+    document.addEventListener("click",function(e){
+        console.log(e.target);
+        var x = e.target.getAttribute('link');
+        var y = e.target.getAttribute('href');
+        if(true){
+            e.preventDefault();
+        }
+        if(x){
+            setTimeout(
+            $.ajax({  
+            url:x,  
+            type:'get',  
+            async:true,
+            dataType:'html',
+            beforeSend: function () {  
+                $('#ajax_change2').remove();
+                $("#ajax_change1").append('<div id="pload" style="position:fixed;top:30%;z-index:1200;background:url(https://dn-coding-net-production-pp.qbox.me/06b36bf5-4fda-4afb-afcb-80700df05834.gif) top center no-repeat;width:100%;height:140px;margin:auto auto;"></div>');  
+                                sleep(1100);
+            },  
+            complete: function () {  
+                            sleep(1100);
+                $("#pload").remove();  
+                
+            },  
+            success:function(result){  
+                var doc = (new DOMParser()).parseFromString(result,"text/html");
+                var k = doc.getElementById("ajax_change2");
+                console.log(doc);
+                console.log(k);
+                $("#ajax_change1").append(k);
+                sleep(1100);
+            }  
+            })
+            ,1000);
+            
+            
+            
+  
+  
+  
+        }
+        else if(y){
+            $('#ajax_change1').load(y + ' #ajax_change2',function(response,status){
+                alert(status);  
+            })
+        }
+        return false;
+    })
 </script>
-  <script type="text/javascript">
-	$.pjax({
-		selector: 'a',
-		container: '#main', //内容替换的容器
-		show: 'fade',  //展现的动画，支持默认和fade, 可以自定义动画方式，这里为自定义的function即可。
-		cache: true,  //是否使用缓存
-		storage: true,  //是否使用本地存储
-		titleSuffix: '', //标题后缀
-		filter: function(){},
-		callback: function(){}
-	})
+<!--
+<script>
+
+
+            $('#ajax_change1').load(x + ' #ajax_change2',function(response,status){
+                alert(111);
+  
+            })
+
+
+  function tiaozhuan(x){
+  alert(x);
+              $('#ajax_change1').load(x + ' #ajax_change2',function(response,status){
+            alert(status);
+              if (status=="success")
+              {
+              }
+            })
+  
+  }
+  
+  
   </script>
+  <script type="text/javascript">
+$(document).ready(function(){
+  $(".post_entry-module").click(function(e){
+          console.log(e);
+          e.preventDefault();
+          e.stopPropagation()
+                      var x = e.target.getAttribute('href');
+            alert(x);
+    $('#ajax_change1').load('/page/2 #ajax_change2',function(response,status){
+      if (status=="success")
+      {
+      alert("111")
+      }
+      })
+  })
+})
+</script>-->
+  
+  
   
   
   <!--skplayer-->
@@ -372,7 +479,8 @@ $(function () {
                     
 
                     <!-- Index Module -->
-<div class="material-index mdl-grid">
+<div id="ajax_change1">
+<div class="material-index mdl-grid" id="ajax_change2">
     
     <div class="locate-thumbnail-symbol"></div>
 
@@ -384,29 +492,29 @@ $(function () {
         
             
                 <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--6dp mdl-cell mdl-cell--6-col fade out" style="height:360px;">
+                <div class="post_entry-module mdl-card mdl-shadow--6dp mdl-cell mdl-cell--6-col fade out" link="/posts/5/" style="height:360px;">
     <!-- Post Thumbnail -->
     
         <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy my_button" style="padding:0px;" data-original="/image/2.jpg">
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy my_button" link="/posts/5/" style="padding:0px;" data-original="/image/2.jpg">
     
 
         <!-- Post Title -->
-        <p class="article-headline-p mdl-card__title mdl-color-text--grey-50 my_button" style="background-color:#969696;background-color:rgba(46,46,46,0.5);no-repeat;backgroud-size:cover;height:50px;font-size: 1.4rem;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';"><a href="/posts/5/">本地文件插入测试</a></p>
+        <p class="article-headline-p mdl-card__title mdl-color-text--grey-50 my_button" link="/posts/5/" style="background-color:#969696;background-color:rgba(46,46,46,0.5);no-repeat;backgroud-size:cover;height:50px;font-size: 1.4rem;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';">本地文件插入测试</p>
     </div>
 
     <!-- Post Excerpt -->
     <div class="mdl-color-text--grey-700 mdl-card__actions post_entry-content" style="font-size:1.05rem;padding:0px;height:96px;">
-		<a class="mdl-button mdl-button--colored mdl-button--6-col mdl-js-button mdl-js-ripple-effect mdl-color-text--grey-700" style="padding:12px 16px;height:96px;border-radius: 0px;line-height: 24px;text-align:left;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';text-transform: none;" href="/posts/5/" target="_self">
+		<p class="mdl-card__supporting-text mdl-color-text--grey-700" link="/posts/5/" style="font-size:1rem;display:block;padding:12px 16px;height:96px;border-radius: 0px;line-height: 24px;text-align:left;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';text-transform: none;">
         
             图片0图片1
         
-		</a>
+		</p>
 
     </div>
     <!-- Post_entry Info-->
     <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__actions meta mdl-color-text--grey-500 " style="font-size:1.05rem;height:44px;padding:0px;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';">
+        <div id="post_entry-left-info" class="mdl-card__actions meta mdl-color-text--grey-500 " link="/posts/5/" style="font-size:1.05rem;height:44px;padding:0px;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';">
 		<div class="mdl-actions mdl-color-text--grey-500" style="margin-right:0px;padding:12px 0px 12px 16px;height:44px;border-radius: 0px;line-height: 20px;text-align:left;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';text-transform: none;" href="/posts/5/" target="_self">
             <!-- Author Avatar -->
 			<span><b>
@@ -435,30 +543,30 @@ $(function () {
         
             
                 <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--6dp mdl-cell mdl-cell--6-col fade out" style="height:360px;">
+                <div class="post_entry-module mdl-card mdl-shadow--6dp mdl-cell mdl-cell--6-col fade out" link="/posts/4/" style="height:360px;">
     <!-- Post Thumbnail -->
     
         <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy my_button" style="padding:0px;" data-original="/image/5.jpg">
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy my_button" link="/posts/4/" style="padding:0px;" data-original="/image/5.jpg">
     
 
         <!-- Post Title -->
-        <p class="article-headline-p mdl-card__title mdl-color-text--grey-50 my_button" style="background-color:#969696;background-color:rgba(46,46,46,0.5);no-repeat;backgroud-size:cover;height:50px;font-size: 1.4rem;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';"><a href="/posts/4/">草稿</a></p>
+        <p class="article-headline-p mdl-card__title mdl-color-text--grey-50 my_button" link="/posts/4/" style="background-color:#969696;background-color:rgba(46,46,46,0.5);no-repeat;backgroud-size:cover;height:50px;font-size: 1.4rem;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';">草稿</p>
     </div>
 
     <!-- Post Excerpt -->
     <div class="mdl-color-text--grey-700 mdl-card__actions post_entry-content" style="font-size:1.05rem;padding:0px;height:96px;">
-		<a class="mdl-button mdl-button--colored mdl-button--6-col mdl-js-button mdl-js-ripple-effect mdl-color-text--grey-700" style="padding:12px 16px;height:96px;border-radius: 0px;line-height: 24px;text-align:left;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';text-transform: none;" href="/posts/4/" target="_self">
+		<p class="mdl-card__supporting-text mdl-color-text--grey-700" link="/posts/4/" style="font-size:1rem;display:block;padding:12px 16px;height:96px;border-radius: 0px;line-height: 24px;text-align:left;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';text-transform: none;">
         
             这是一篇草稿发表的实验
 
         
-		</a>
+		</p>
 
     </div>
     <!-- Post_entry Info-->
     <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__actions meta mdl-color-text--grey-500 " style="font-size:1.05rem;height:44px;padding:0px;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';">
+        <div id="post_entry-left-info" class="mdl-card__actions meta mdl-color-text--grey-500 " link="/posts/4/" style="font-size:1.05rem;height:44px;padding:0px;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';">
 		<div class="mdl-actions mdl-color-text--grey-500" style="margin-right:0px;padding:12px 0px 12px 16px;height:44px;border-radius: 0px;line-height: 20px;text-align:left;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';text-transform: none;" href="/posts/4/" target="_self">
             <!-- Author Avatar -->
 			<span><b>
@@ -487,29 +595,29 @@ $(function () {
         
             
                 <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--6dp mdl-cell mdl-cell--6-col fade out" style="height:360px;">
+                <div class="post_entry-module mdl-card mdl-shadow--6dp mdl-cell mdl-cell--6-col fade out" link="/posts/3/" style="height:360px;">
     <!-- Post Thumbnail -->
     
         <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy my_button" style="padding:0px;" data-original="/image/8.png">
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy my_button" link="/posts/3/" style="padding:0px;" data-original="/image/8.png">
     
 
         <!-- Post Title -->
-        <p class="article-headline-p mdl-card__title mdl-color-text--grey-50 my_button" style="background-color:#969696;background-color:rgba(46,46,46,0.5);no-repeat;backgroud-size:cover;height:50px;font-size: 1.4rem;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';"><a href="/posts/3/">测试页面 Hello World!</a></p>
+        <p class="article-headline-p mdl-card__title mdl-color-text--grey-50 my_button" link="/posts/3/" style="background-color:#969696;background-color:rgba(46,46,46,0.5);no-repeat;backgroud-size:cover;height:50px;font-size: 1.4rem;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';">测试页面 Hello World!</p>
     </div>
 
     <!-- Post Excerpt -->
     <div class="mdl-color-text--grey-700 mdl-card__actions post_entry-content" style="font-size:1.05rem;padding:0px;height:96px;">
-		<a class="mdl-button mdl-button--colored mdl-button--6-col mdl-js-button mdl-js-ripple-effect mdl-color-text--grey-700" style="padding:12px 16px;height:96px;border-radius: 0px;line-height: 24px;text-align:left;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';text-transform: none;" href="/posts/3/" target="_self">
+		<p class="mdl-card__supporting-text mdl-color-text--grey-700" link="/posts/3/" style="font-size:1rem;display:block;padding:12px 16px;height:96px;border-radius: 0px;line-height: 24px;text-align:left;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';text-transform: none;">
         
             这是大标题这是中标题
         
-		</a>
+		</p>
 
     </div>
     <!-- Post_entry Info-->
     <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__actions meta mdl-color-text--grey-500 " style="font-size:1.05rem;height:44px;padding:0px;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';">
+        <div id="post_entry-left-info" class="mdl-card__actions meta mdl-color-text--grey-500 " link="/posts/3/" style="font-size:1.05rem;height:44px;padding:0px;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';">
 		<div class="mdl-actions mdl-color-text--grey-500" style="margin-right:0px;padding:12px 0px 12px 16px;height:44px;border-radius: 0px;line-height: 20px;text-align:left;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';text-transform: none;" href="/posts/3/" target="_self">
             <!-- Author Avatar -->
 			<span><b>
@@ -561,7 +669,7 @@ $(function () {
 
     
 </div>
-
+</div>
 
                     
                         <!-- Overlay For Active Sidebar -->
