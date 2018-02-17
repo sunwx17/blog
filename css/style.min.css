@@ -2464,7 +2464,7 @@ a {
     position: fixed;
     bottom: 24px;
     right: -41px;
-    transition: background-color .18s cubic-bezier(.6,0,.1,1),box-shadow .18s cubic-bezier(.6,0,.1,1),transform .18s cubic-bezier(.6,0,.1,1);
+    transition: background-color .18s cubic-bezier(0.18, 0.89, 0.32, 1.28),box-shadow .18s cubic-bezier(0.18, 0.89, 0.32, 1.28),transform .18s cubic-bezier(0.18, 0.89, 0.32, 1.28);
     z-index: 8;
 }
 #back-to-top.btt-visible{
@@ -2879,4 +2879,10 @@ a,button {
 }
 :visited{
     cursor: url("/image/cursur/Help.cur"),auto!important
+}
+#ajax_change2{
+    -webkit-transition: all .6s ease-out;
+    -moz-transition: all .6s ease-out;
+    -o-transition: all .6s ease-out;
+    transition: all .6s ease-out;
 }
