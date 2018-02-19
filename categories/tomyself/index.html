@@ -327,7 +327,18 @@
  <script>
 $(function () {
             $.backstretch([
-                  "https://dn-coding-net-production-pp.qbox.me/d96a4494-5fe7-4417-9ff4-bf9fdb5714cd.jpg", "https://dn-coding-net-production-pp.qbox.me/8f0ada95-fa8e-41a0-a6cf-a3d54dfd29fb.jpg", "https://dn-coding-net-production-pp.qbox.me/43b04f6d-090f-419e-82d4-bd9fc0c9b2aa.jpg", "https://dn-coding-net-production-pp.qbox.me/2720527c-3c7f-4851-9269-41b910dd3ba8.jpg", "https://dn-coding-net-production-pp.qbox.me/a2bf66ed-7221-47b2-becb-9b7544353522.jpg", "https://dn-coding-net-production-pp.qbox.me/3f90e634-4738-435b-b654-303bff9eb2c9.jpg", "https://dn-coding-net-production-pp.qbox.me/a1649947-a5ac-4a9a-97a2-e030344f6e25.jpg", "https://dn-coding-net-production-pp.qbox.me/a1ec70b9-7a44-4485-8541-056c14af6c43.jpg", "https://dn-coding-net-production-pp.qbox.me/f0b596a6-b3d8-4cff-95fb-a3f21dbcd833.jpg", "https://dn-coding-net-production-pp.qbox.me/44815347-b667-4ef0-bacd-5d971ed524e1.jpg"
+"https://picture-1256084113.cos.ap-beijing.myqcloud.com/background/1.jpg",
+"https://picture-1256084113.cos.ap-beijing.myqcloud.com/background/2.jpg",
+"https://picture-1256084113.cos.ap-beijing.myqcloud.com/background/3.jpg",
+"https://picture-1256084113.cos.ap-beijing.myqcloud.com/background/4.jpg",
+"https://picture-1256084113.cos.ap-beijing.myqcloud.com/background/5.jpg",
+"https://picture-1256084113.cos.ap-beijing.myqcloud.com/background/6.jpg",
+"https://picture-1256084113.cos.ap-beijing.myqcloud.com/background/7.jpg",
+"https://picture-1256084113.cos.ap-beijing.myqcloud.com/background/8.jpg",
+"https://picture-1256084113.cos.ap-beijing.myqcloud.com/background/9.jpg",
+"https://picture-1256084113.cos.ap-beijing.myqcloud.com/background/10.jpg",
+"https://picture-1256084113.cos.ap-beijing.myqcloud.com/background/11.jpg",
+"https://picture-1256084113.cos.ap-beijing.myqcloud.com/background/12.jpg"
             ], { duration: 10000, fade: 1000,animateFirst: !1 });
         });
 </script>
@@ -345,9 +356,9 @@ $(function () {
     
   window.onload=function(){
 
-      $("#ajax_change1").append('<div id="pload" style="position:fixed;top:30%;z-index:1200;background:url(https://dn-coding-net-production-pp.qbox.me/06b36bf5-4fda-4afb-afcb-80700df05834.gif) top center no-repeat;width:100%;height:500px;margin:auto auto;"></div>');  
+      $("#ajax_change1").append('<div id="pload" style="position:fixed;top:40%;z-index:1200;background:url(https://picture-1256084113.cos.ap-beijing.myqcloud.com/function-image/loading.gif) top center no-repeat;width:100%;height:500px;margin:auto auto;"></div>');  
 
-      setTimeout("dosomething_ys();$('#pload').remove();dosomething_dh();",1000);
+      setTimeout("dosomething_ys();$('#pload').remove();dosomething_dh();",1500);
   }
   function dosomething_ys(){
       if($('.mdl-button__ripple-container')){
@@ -416,9 +427,9 @@ $(function () {
                 setTimeout(function(){
                     $("#bottom").hide(0);
                     $('#ajax_change2').remove();
+                    $("#ajax_change1").append('<div id="pload" style="position:fixed;top:40%;z-index:1200;background:url(https://picture-1256084113.cos.ap-beijing.myqcloud.com/function-image/loading.gif) top center no-repeat;width:100%;height:500px;margin:auto auto;"></div>');  
                     $(window).scrollTop(0);
-                    $("#ajax_change1").append('<div id="pload" style="position:fixed;top:30%;z-index:1200;background:url(https://dn-coding-net-production-pp.qbox.me/06b36bf5-4fda-4afb-afcb-80700df05834.gif) top center no-repeat;width:100%;height:500px;margin:auto auto;"></div>');  
-                },600);
+                },700);
             },  
             complete: function () {   
             },  
@@ -463,7 +474,7 @@ $(function () {
                         $("#bottom").show(0);
                         $("#pload").remove();  
                         dosomething_dh();    
-                    },1000);
+                    },1500);
                     
 
             }  
@@ -490,9 +501,9 @@ $(function () {
                 setTimeout(function(){
                     $("#bottom").hide(0);
                     $('#ajax_change2').remove();
+                    $("#ajax_change1").append('<div id="pload" style="position:fixed;top:40%;z-index:1200;background:url(https://picture-1256084113.cos.ap-beijing.myqcloud.com/function-image/loading.gif) top center no-repeat;width:100%;height:500px;margin:auto auto;"></div>');  
                     $(window).scrollTop(0);
-                    $("#ajax_change1").append('<div id="pload" style="position:fixed;top:30%;z-index:1200;background:url(https://dn-coding-net-production-pp.qbox.me/06b36bf5-4fda-4afb-afcb-80700df05834.gif) top center no-repeat;width:100%;height:500px;margin:auto auto;"></div>');  
-                },600);
+                },700);
             },  
             complete: function () {  
  
@@ -524,7 +535,7 @@ $(function () {
                         $("#bottom").show(0);
                         $("#pload").remove();  
                         dosomething_dh();    
-                    },1000);
+                    },1500);
             }  
             })
         }
@@ -555,9 +566,9 @@ $(document).ready(function(){
                 setTimeout(function(){
                     $("#bottom").hide(0);
                     $('#ajax_change2').remove();
+                    $("#ajax_change1").append('<div id="pload" style="position:fixed;top:30%;z-index:1200;background:url(https://picture-1256084113.cos.ap-beijing.myqcloud.com/function-image/loading.gif) top center no-repeat;width:100%;height:500px;margin:auto auto;"></div>');  
                     $(window).scrollTop(0);
-                    $("#ajax_change1").append('<div id="pload" style="position:fixed;top:30%;z-index:1200;background:url(https://dn-coding-net-production-pp.qbox.me/06b36bf5-4fda-4afb-afcb-80700df05834.gif) top center no-repeat;width:100%;height:500px;margin:auto auto;"></div>');  
-                },600);
+                },700);
       },  
       complete: function () {      
       },  
@@ -584,7 +595,7 @@ $(document).ready(function(){
                   $("#bottom").show(0);
                   $("#pload").remove();  
                   dosomething_dh();    
-              },1000);
+              },1500);
       }  
       })
   })
@@ -740,7 +751,7 @@ $(document).ready(function(){
 
     <!-- Sidebar Avatar -->
     <div class="sidebar-image">
-        <img src="/img/avatar.png" alt="SunWeixiao's avatar">
+        <img src="/img/avatar.jpg" alt="SunWeixiao's avatar">
     </div>
 
     <!-- Sidebar Email -->
