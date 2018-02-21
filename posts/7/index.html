@@ -78,7 +78,7 @@
     <!-- Import CSS -->
     
         <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?D6hjv31W+IVw/OMyTb4mHQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?35R4A/tS1sOkVWyjTFOL8g==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?oSnDTsfblaZ8MM47LREMyA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
         
             
@@ -399,6 +399,13 @@ $(document).ready(function(){
       setTimeout("dosomething_ys();$('#pload').remove();dosomething_dh();",2000);
   }
   function dosomething_ys(){
+
+  
+  
+  
+  
+  
+  
       if($('.mdl-button__ripple-container')){
           $('.mdl-button__ripple-container').remove();
       }
@@ -441,10 +448,28 @@ $(document).ready(function(){
         if(e.button == 2){
             return false;
         }
-
+        if(e.target.id == "post-toc-trigger-btn-" || e.target.id == "post-toc-trigger-btn-icon"){
+            if($("#toc-container").hasClass("my-is-visible")){
+                $("#toc-container").removeClass("my-is-visible");
+                $("#toc-container-text").slideUp(400);   
+            }
+            else{
+                $("#toc-container").addClass("my-is-visible");
+                $("#toc-container-text").slideDown(400);         
+            }
+            return false;
+        }
+        if($("#toc-container").hasClass("my-is-visible")){
+            $("#toc-container").removeClass("my-is-visible");
+            $("#toc-container-text").slideUp(400);     
+        }
+        
+        
+        
+        
         var x = e.target.getAttribute('link');
         var y = e.target.getAttribute('href');
-        if(x || (y && y != '#')){
+        if(x || (y && y.indexOf("#") == -1)){
             if(x || y[0] == '/'){
                 e.preventDefault();
             }
@@ -475,8 +500,8 @@ $(document).ready(function(){
 
                     var doc = (new DOMParser()).parseFromString(result,"text/html");
                     var k = doc.getElementById("ajax_change2");
-                    var b = doc.getElementById("post-toc-trigger-btn");
-                    var ob = document.getElementById("post-toc-trigger-btn");
+                    var b = doc.getElementById("post-toc-trigger-btn-");
+                    var ob = document.getElementById("post-toc-trigger-btn-");
                     var bc = doc.getElementById("toc-container");
                     var obc = document.getElementById("toc-container");
                     var new_title = doc.title;
@@ -518,7 +543,7 @@ $(document).ready(function(){
             }  
             })
         }
-        else if(y && y != '#' && y[0] == '/'){
+        else if(y && y.indexOf("#") == -1 && y[0] == '/'){
             $.ajax({  
             url:y,  
             type:'get',  
@@ -549,9 +574,22 @@ $(document).ready(function(){
             success:function(result){    
                     var doc = (new DOMParser()).parseFromString(result,"text/html");
                     var k = doc.getElementById("ajax_change2");
+                    var b = doc.getElementById("post-toc-trigger-btn-");
+                    var ob = document.getElementById("post-toc-trigger-btn-");
+                    var bc = doc.getElementById("toc-container");
+                    var obc = document.getElementById("toc-container");
                     var new_title = doc.title;
                     document.title = new_title;
                     $("#ajax_change1").append(k);
+                    
+                    if(ob){
+                        ob.remove();
+                        obc.remove();
+                    }
+                    if(b){
+                        $("#main").append(b);
+                        $("#main").append(bc);
+                    }
                     
                     var state = {url:y, title: new_title};
                     window.history.pushState(state, new_title, y);
@@ -586,7 +624,14 @@ $(document).ready(function(){
                     
 $(document).ready(function(){
   $(window).on('popstate', function (e) {
-      var y = e.target.document.URL;
+                //e.preventDefault();
+                      var y = e.target.document.URL;
+
+      if(y.indexOf("#") != -1){
+          e.preventDefault();
+          return false;
+      }
+      
       var new_title = e.target.document.title;
       document.title = new_title;
       $.ajax({  
@@ -613,7 +658,20 @@ $(document).ready(function(){
       success:function(result){  
               var doc = (new DOMParser()).parseFromString(result,"text/html");
               var k = doc.getElementById("ajax_change2");
+              var b = doc.getElementById("post-toc-trigger-btn-");
+              var ob = document.getElementById("post-toc-trigger-btn-");
+              var bc = doc.getElementById("toc-container");
+              var obc = document.getElementById("toc-container");
               $("#ajax_change1").append(k);
+              
+              if(ob){
+                  ob.remove();
+                  obc.remove();
+              }
+              if(b){
+                  $("#main").append(b);
+                  $("#main").append(bc);
+              }
               
               MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
               dosomething_ys();
@@ -692,12 +750,12 @@ $(document).ready(function(){
     <!-- Left aligned menu below button -->
     
     
-    <button id="post-toc-trigger-btn"
-        class="mdl-button mdl-js-button mdl-button--icon">
-        <i class="material-icons">format_list_numbered</i>
+    <button id="post-toc-trigger-btn-"
+        class="mdl-button mdl-js-button mdl-button--icon" data-upgraded=",MaterialButton">
+        <i id="post-toc-trigger-btn-icon" class="material-icons">format_list_numbered</i>
     </button>
-	<div id="toc-container" class="mdl-menu__container is-upgraded" style="position: fixed; left: 16px; top: 112px; width: 181.4px; height: 88px;">
-    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+	<div id="toc-container" class="mdl-menu__container is-upgraded is-visible" style="position: fixed; left: 16px; top: 112px; z-index:999;border-radius:2px;">
+    <ul id="toc-container-text" class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="display:none;max-height:80vh; overflow-y:scroll;clip: rect(0px 442.4px 136px 0px);background-color:#ffffff" data-upgraded=",MaterialMenu,MaterialRipple">
         <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#关于"><span class="post-toc-number">1.</span> <span class="post-toc-text"> 关于</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#代码"><span class="post-toc-number">2.</span> <span class="post-toc-text"> 代码</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#启动"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">  启动</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#登陆"><span class="post-toc-number">2.2.</span> <span class="post-toc-text"> 登陆</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#注意-本文非本人所创，内容来自网络，仅限预览格式"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">注意!本文非本人所创，内容来自网络，仅限预览格式</span></a></li></ol></li></ol>
     </ul>
 	</div>

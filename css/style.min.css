@@ -822,16 +822,16 @@ a {
     padding-top: 2pc;
     padding-left: 3pc
 }
-#scheme-Paradox #post-toc-trigger-btn {
+#scheme-Paradox #post-toc-trigger-btn- {
     position: fixed;
     top: 5pc;
     left: 1pc;
     z-index: 8;
-    color: #fff;
+    color: #757575;
     border-radius: 50%
 }
 @media screen and (max-width: 480px) {
-    #scheme-Paradox #post-toc-trigger-btn {
+    #scheme-Paradox #post-toc-trigger-btn- {
         display: none
     }
 }
@@ -2885,4 +2885,10 @@ a,button {
     -moz-transition: all .6s ease-out;
     -o-transition: all .6s ease-out;
     transition: all .6s ease-out;
+}
+#toc-container {
+    -webkit-transition: all 3s ease-out;
+    -moz-transition: all 3s ease-out;
+    -o-transition: all 3s ease-out;
+    transition: all 3s ease-out;
 }
