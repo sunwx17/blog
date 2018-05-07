@@ -240,7 +240,7 @@
 
     
         <meta property="article:published_time" content="Sun May 06 2018 23:13:38 GMT+0800">
-        <meta property="article:modified_time" content="Mon May 07 2018 22:31:26 GMT+0800">
+        <meta property="article:modified_time" content="Mon May 07 2018 22:40:21 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -263,7 +263,7 @@
     "mainEntityOfPage": "http://sunweixiao.com/posts/hello-world/index.html",
     "headline": "你好，世界！",
     "datePublished": "Sun May 06 2018 23:13:38 GMT+0800",
-    "dateModified": "Mon May 07 2018 22:31:26 GMT+0800",
+    "dateModified": "Mon May 07 2018 22:40:21 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "SunWeixiao",
@@ -825,13 +825,13 @@ $(document).ready(function(){
 <p><img src="https://picture-1256084113.cos.ap-beijing.myqcloud.com/blog/hello-world/2.png" alt="2"></p>
 <h2 id="建站之路"><a href="#建站之路" class="headerlink" title="  建站之路"></a><i class="fa fa-leaf" aria-hidden="true"></i>  建站之路</h2><p>&emsp; &emsp; 想想自己这一路走来，从几乎彻彻底底的小菜鸟，到最终做出这个还算拿得出手的网站，踩过无数的坑，也学到了许多。从最开始只能改改别人的css参数，到后来也能自己写写ejs模板，再到后来能写一个完整的js，这一路有许多收获。在这里我记录下我在建站之路上使用的技术、配置以及踩过的坑。</p>
 <h3 id="技术相关"><a href="#技术相关" class="headerlink" title="  技术相关"></a><i class="fa fa-fire" aria-hidden="true"></i>  技术相关</h3><h4 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a><strong>服务器</strong></h4><p>&emsp; &emsp; 因为穷，所以买不起服务器。毕竟只是静态网站，所以可以直接依托于<code>Coding Pages</code>及<code>GitHub Pages</code>（GitHub大法好！）。通过<code>DNS</code>分流，实现国内走Coding，国外走GitHub，显著提高了国内访问速度。</p>
-<h4 id="引擎"><a href="#引擎" class="headerlink" title="引擎"></a><strong>引擎</strong></h4><p>&emsp; &emsp; 正如右下角所示，本站使用<code>Hexo</code>构建，主题为<code>Material</code>。我对该主题进行了大规模魔改。Material主题的初始形态看<a href="https://blog.viosey.com/" target="_blank" rel="noopener">这里</a></p>
+<h4 id="引擎"><a href="#引擎" class="headerlink" title="引擎"></a><strong>引擎</strong></h4><p>&emsp; &emsp; 正如右下角所示，本站使用<code>Hexo</code>构建，主题为<code>Material</code>。我对该主题进行了大规模魔改。Material主题的初始形态看<a href="https://blog.viosey.com/" target="_blank" rel="noopener">这里</a>。</p>
 <h4 id="域名"><a href="#域名" class="headerlink" title="域名"></a><strong>域名</strong></h4><p>&emsp; &emsp; 推荐一个买域名的好地方 <code>namesile</code>，链接看<a href="https://www.namesilo.com/index.php" target="_blank" rel="noopener">这里</a>。有优惠码的话，这里.com域名首年只要6刀/年，续费也没有涨太多，比国内某云良心多了。想便宜点也可以买比较小众的域名后缀。至于我为什么买.com域名…可能就是小时候的执念吧（笑）。</p>
 <h4 id="其他配置"><a href="#其他配置" class="headerlink" title="其他配置"></a><strong>其他配置</strong></h4><p>&emsp; &emsp; 目前图床用的<code>腾讯云</code>。免费额度有50G空间和10G流量，如果没被盗链的话，对这个小站应该是够了。<br>&emsp; &emsp; DNS也是在<code>腾讯云</code>。不得不说腾讯在这方面还是蛮良心的，对免费用户有很大的吸引力。<br>&emsp; &emsp; 统计功能使用<code>百度统计</code>，主要是因为<code>Google Analytics</code>在国内太不稳定了。</p>
 <h4 id="插件相关"><a href="#插件相关" class="headerlink" title="插件相关"></a><strong>插件相关</strong></h4><p>&emsp; &emsp; 背景插件为<code>backstretch</code>，<a href="https://github.com/jquery-backstretch/jquery-backstretch" target="_blank" rel="noopener">链接</a><br>&emsp; &emsp; 音乐插件为<code>SKPlayer</code>，<a href="https://github.com/wangpengfei15975/skPlayer" target="_blank" rel="noopener">链接</a><br>&emsp; &emsp; 公式插件为<code>Mathjax</code>，<a href="https://www.mathjax.org/" target="_blank" rel="noopener">链接</a><br>&emsp; &emsp; 图标库为<code>fontawesome</code>，<a href="https://fontawesome.com/" target="_blank" rel="noopener">链接</a></p>
 <h4 id="评论系统"><a href="#评论系统" class="headerlink" title="评论系统"></a><strong>评论系统</strong></h4><p>&emsp; &emsp; 评论系统使用<code>Gitalk</code>，<a href="https://github.com/gitalk/gitalk" target="_blank" rel="noopener">链接</a>。需要用GitHub账号登陆才能评论。评论可以使用<code>markdown</code>语法，支持包括插入图片等操作。</p>
 <h4 id="ajax-pushstate"><a href="#ajax-pushstate" class="headerlink" title="ajax+pushstate"></a><strong>ajax+pushstate</strong></h4><p>&emsp; &emsp; 为了使跳转界面时无刷新，只改变必须改变的部分，一个解决方案是<code>pjax</code>。但我在配置的时候总有莫名奇妙的BUG。因此只好手动<code>ajax</code>异步获取+<code>pushstate</code>改变浏览记录及URL。可以说，一切跳转动画全部建立在不刷新的基础之上，因此这个技术尤其重要。</p>
-<h4 id="一个取色网站"><a href="#一个取色网站" class="headerlink" title="一个取色网站"></a><strong>一个取色网站</strong></h4><p>&emsp; &emsp; 这里推荐一个取色网站：<a href="http://nipponcolors.com/" target="_blank" rel="noopener">日本の伝統色</a>。本站大部分颜色都取自于这里。可惜我并没有网页配色的经验，只能凭直觉瞎配一通。有需要的小伙伴可以取走好好玩一玩。</p>
+<h4 id="一个取色网站"><a href="#一个取色网站" class="headerlink" title="一个取色网站"></a><strong>一个取色网站</strong></h4><p>&emsp; &emsp; 这里推荐一个取色网站：<a href="http://nipponcolors.com/" target="_blank" rel="noopener">日本の伝統色</a>。这里多是一些比较古典、传统、带有日本风情的颜色。本站大部分颜色都取自于这里。可惜我并没有网页配色的经验，只能凭直觉瞎配一通。有需要的小伙伴可以取走好好玩一玩。</p>
 <h3 id="ToDo"><a href="#ToDo" class="headerlink" title="  ToDo"></a><i class="fa fa-fire" aria-hidden="true"></i>  ToDo</h3><p>还有些非常想实现的功能因为时间原因不能即时上线了。于是将这些功能列在下面，留作提醒。</p>
 <ul>
 <li style="list-style: none"><input type="checkbox"> 制作关于界面，并把这部分内容移至关于中</li>
