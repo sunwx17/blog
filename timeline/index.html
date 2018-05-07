@@ -78,7 +78,7 @@
     <!-- Import CSS -->
     
         <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?D6hjv31W+IVw/OMyTb4mHQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?oSnDTsfblaZ8MM47LREMyA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?0+hlbg3002x0J1VYVxhkyg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
         
             
@@ -448,7 +448,10 @@ $(document).ready(function(){
                 if($("#ajax_change2").hasClass("material-index")){
                     $("#ajax_change2")[0].style.transform="scale(0)";
                 }
-                if($("#ajax_change2").hasClass("material-post_container")){
+                else if($("#ajax_change2").hasClass("material-post_container")){
+                    $("#ajax_change2")[0].style.opacity=0;
+                }
+                else{
                     $("#ajax_change2")[0].style.opacity=0;
                 }
                 setTimeout(function(){
@@ -461,7 +464,6 @@ $(document).ready(function(){
             complete: function () {   
             },  
             success:function(result){  
-
                     var doc = (new DOMParser()).parseFromString(result,"text/html");
                     var k = doc.getElementById("ajax_change2");
                     var b = doc.getElementById("post-toc-trigger-btn-");
@@ -522,7 +524,10 @@ $(document).ready(function(){
                 if($("#ajax_change2").hasClass("material-index")){
                     $("#ajax_change2")[0].style.transform="scale(0)";
                 }
-                if($("#ajax_change2").hasClass("material-post_container")){
+                else if($("#ajax_change2").hasClass("material-post_container")){
+                    $("#ajax_change2")[0].style.opacity=0;
+                }
+                else{
                     $("#ajax_change2")[0].style.opacity=0;
                 }
                 setTimeout(function(){
@@ -545,7 +550,6 @@ $(document).ready(function(){
                     var new_title = doc.title;
                     document.title = new_title;
                     $("#ajax_change1").append(k);
-                    
                     if(ob){
                         ob.remove();
                         obc.remove();
@@ -557,7 +561,7 @@ $(document).ready(function(){
                     
                     var state = {url:y, title: new_title};
                     window.history.pushState(state, new_title, y);
-                    dosomething_ys();
+                    dosomething_ys();                 
                     MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
                     if (y.indexOf("/posts") != -1){
                         var gitalk = new Gitalk({
@@ -697,7 +701,10 @@ $(document).ready(function(){
 <!-- Layouts -->
 
     <!-- Single Timeline Page -->
-    <style>
+    <div id="ajax_change1">
+  <div id="ajax_change2" style="transform:scale(0);">
+    
+<style>
 	.md-container {
 		width: 90%;
 		max-width: 1170px;
@@ -1094,14 +1101,14 @@ $(document).ready(function(){
    	   		
 			<div class="md-timeline-block">
                 		<div class="md-timeline-date blue">
-                   			<div class="md-date">2月 09 2018</div>
+                   			<div class="md-date">5月 06 2018</div>
                 		</div>
 
                 		<div class="md-timeline-content">
-                    			<div class="md-timeline-title"><a href="/posts/7/">P站图片爬虫 Pixiv-Spider</a></div>
+                    			<div class="md-timeline-title"><a href="/posts/hello-world/">你好，世界！</a></div>
 					<div class="md-timeline-info">
 						<span class="md-timeline-info-span">Categories:
-							<a class="category-link" href="/categories/thinking/">随想集</a>
+							<a class="category-link" href="/categories/events/">记事簿</a>
 						</span>
 						<span class="md-timeline-info-span">Tags:
 							
@@ -1110,152 +1117,7 @@ $(document).ready(function(){
 					</div>
 					<p class="md-timeline-excerpt">
 						
-							最近因为工作的原因，接触 Nodejs 也愈加多了起来，从搭建 koa2 后台服务器，到 PM2 管理各种服务进程，虽然期间踩了不少坑也勉强过来了，作为练手写了个P站图片爬虫。
-						...
-					</p>
-                    		</div>
-			</div>	
-   		
-			<div class="md-timeline-block">
-                		<div class="md-timeline-date blue">
-                   			<div class="md-date">2月 08 2018</div>
-                		</div>
-
-                		<div class="md-timeline-content">
-                    			<div class="md-timeline-title"><a href="/posts/6/">新看板娘 Tia の改造记事</a></div>
-					<div class="md-timeline-info">
-						<span class="md-timeline-info-span">Categories:
-							<a class="category-link" href="/categories/notebook/">笔记本</a>
-						</span>
-						<span class="md-timeline-info-span">Tags:
-							
-						</span>
-						
-					</div>
-					<p class="md-timeline-excerpt">
-						
-							最近 Pio 大有泛滥之势，惨象已使我目不忍视了，或许这其中与我有些干系 ，毕竟当初偷师后流出了一大批模型，但我还有什么话可说呢，好吧已无它法，来加个美美哒新老婆 Tia 吧。
-						...
-					</p>
-                    		</div>
-			</div>	
-   		
-			<div class="md-timeline-block">
-                		<div class="md-timeline-date blue">
-                   			<div class="md-date">2月 08 2018</div>
-                		</div>
-
-                		<div class="md-timeline-content">
-                    			<div class="md-timeline-title"><a href="/posts/1/">Vim 哲思</a></div>
-					<div class="md-timeline-info">
-						<span class="md-timeline-info-span">Categories:
-							<a class="category-link" href="/categories/technology/">技术向</a>
-						</span>
-						<span class="md-timeline-info-span">Tags:
-							<a class="tag-link" href="/tags/java/">java</a>, <a class="tag-link" href="/tags/数据库/">数据库</a>
-						</span>
-						
-					</div>
-					<p class="md-timeline-excerpt">
-						
-							说起来惭愧，作为一个程序员怎能不懂 Vim，一直以来对 Vim 只是略知皮毛，目前也只在编辑小文本时偶尔用到。当初几次尝试使用 Vim 都感觉刻意使用反而增加了负担，拖慢了效率。
-						...
-					</p>
-                    		</div>
-			</div>	
-   		
-			<div class="md-timeline-block">
-                		<div class="md-timeline-date blue">
-                   			<div class="md-date">2月 07 2018</div>
-                		</div>
-
-                		<div class="md-timeline-content">
-                    			<div class="md-timeline-title"><a href="/posts/2/">RN App 唤醒踩坑记</a></div>
-					<div class="md-timeline-info">
-						<span class="md-timeline-info-span">Categories:
-							<a class="category-link" href="/categories/tomyself/">自言语</a>
-						</span>
-						<span class="md-timeline-info-span">Tags:
-							<a class="tag-link" href="/tags/标签0/">标签0</a>, <a class="tag-link" href="/tags/标签1/">标签1</a>
-						</span>
-						
-					</div>
-					<p class="md-timeline-excerpt">
-						
-							最近接手的新项目需要实现链接分享功能，然后通过分享的链接唤醒 App 并进行页面跳转，需要同时兼容 iOS 和 Android，不幸这趟坑就让我踩了， 那就只能拥抱新技术吧。
-						...
-					</p>
-                    		</div>
-			</div>	
-   		
-			<div class="md-timeline-block">
-                		<div class="md-timeline-date blue">
-                   			<div class="md-date">2月 07 2018</div>
-                		</div>
-
-                		<div class="md-timeline-content">
-                    			<div class="md-timeline-title"><a href="/posts/5/">本地文件插入测试</a></div>
-					<div class="md-timeline-info">
-						<span class="md-timeline-info-span">Categories:
-							
-						</span>
-						<span class="md-timeline-info-span">Tags:
-							
-						</span>
-						
-					</div>
-					<p class="md-timeline-excerpt">
-						
-							图片0图片1
-						...
-					</p>
-                    		</div>
-			</div>	
-   		
-			<div class="md-timeline-block">
-                		<div class="md-timeline-date blue">
-                   			<div class="md-date">2月 07 2018</div>
-                		</div>
-
-                		<div class="md-timeline-content">
-                    			<div class="md-timeline-title"><a href="/posts/4/">草稿</a></div>
-					<div class="md-timeline-info">
-						<span class="md-timeline-info-span">Categories:
-							
-						</span>
-						<span class="md-timeline-info-span">Tags:
-							
-						</span>
-						
-					</div>
-					<p class="md-timeline-excerpt">
-						
-							这是一篇草稿发表的实验
-
-						...
-					</p>
-                    		</div>
-			</div>	
-   		
-			<div class="md-timeline-block">
-                		<div class="md-timeline-date blue">
-                   			<div class="md-date">2月 07 2018</div>
-                		</div>
-
-                		<div class="md-timeline-content">
-                    			<div class="md-timeline-title"><a href="/posts/3/">测试页面 Hello World!</a></div>
-					<div class="md-timeline-info">
-						<span class="md-timeline-info-span">Categories:
-							
-						</span>
-						<span class="md-timeline-info-span">Tags:
-							
-						</span>
-						
-					</div>
-					<p class="md-timeline-excerpt">
-						
-							这是大标题这是中标题
+							&emsp; &emsp; 多年以后，面对荒废的小站，swx将会回想起见识到互联网缤纷多彩的角落的那个遥远的下午。
 						...
 					</p>
                     		</div>
@@ -1275,6 +1137,8 @@ $(document).ready(function(){
     });
 </script>
 
+    </div>
+</div>
 
 
 
@@ -1300,10 +1164,12 @@ $(document).ready(function(){
         </span>
     </button>
 
-    <!-- Sidebar Avatar -->
+	<!--
+    <!-- Sidebar Avatar 
     <div class="sidebar-image">
         <img src="/img/avatar.jpg" alt="SunWeixiao's avatar">
     </div>
+	-->
 
     <!-- Sidebar Email -->
     <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
@@ -1356,7 +1222,7 @@ $(document).ready(function(){
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">7</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -1374,7 +1240,7 @@ $(document).ready(function(){
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/technology/">技术向<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/notebook/">笔记本<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/tomyself/">自言语<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/thinking/">随想集<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/events/">记事簿<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -1569,7 +1435,7 @@ It will not impact the appearance and can give developers a lot of support :)
 </div>
 
                     <!--Footer-->
-<footer class="mdl-mini-footer" id="bottom" style="display:none;">
+<footer class="mdl-mini-footer" id="bottom" style="display:none;position: absolute; bottom: 0;">
     
         <!-- Paradox Footer Left Section -->
         <div class="mdl-mini-footer--left-section sns-list">

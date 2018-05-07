@@ -78,7 +78,7 @@
     <!-- Import CSS -->
     
         <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?D6hjv31W+IVw/OMyTb4mHQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?oSnDTsfblaZ8MM47LREMyA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?0+hlbg3002x0J1VYVxhkyg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
         
             
@@ -448,7 +448,10 @@ $(document).ready(function(){
                 if($("#ajax_change2").hasClass("material-index")){
                     $("#ajax_change2")[0].style.transform="scale(0)";
                 }
-                if($("#ajax_change2").hasClass("material-post_container")){
+                else if($("#ajax_change2").hasClass("material-post_container")){
+                    $("#ajax_change2")[0].style.opacity=0;
+                }
+                else{
                     $("#ajax_change2")[0].style.opacity=0;
                 }
                 setTimeout(function(){
@@ -461,7 +464,6 @@ $(document).ready(function(){
             complete: function () {   
             },  
             success:function(result){  
-
                     var doc = (new DOMParser()).parseFromString(result,"text/html");
                     var k = doc.getElementById("ajax_change2");
                     var b = doc.getElementById("post-toc-trigger-btn-");
@@ -522,7 +524,10 @@ $(document).ready(function(){
                 if($("#ajax_change2").hasClass("material-index")){
                     $("#ajax_change2")[0].style.transform="scale(0)";
                 }
-                if($("#ajax_change2").hasClass("material-post_container")){
+                else if($("#ajax_change2").hasClass("material-post_container")){
+                    $("#ajax_change2")[0].style.opacity=0;
+                }
+                else{
                     $("#ajax_change2")[0].style.opacity=0;
                 }
                 setTimeout(function(){
@@ -545,7 +550,6 @@ $(document).ready(function(){
                     var new_title = doc.title;
                     document.title = new_title;
                     $("#ajax_change1").append(k);
-                    
                     if(ob){
                         ob.remove();
                         obc.remove();
@@ -557,7 +561,7 @@ $(document).ready(function(){
                     
                     var state = {url:y, title: new_title};
                     window.history.pushState(state, new_title, y);
-                    dosomething_ys();
+                    dosomething_ys();                 
                     MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
                     if (y.indexOf("/posts") != -1){
                         var gitalk = new Gitalk({
@@ -697,7 +701,11 @@ $(document).ready(function(){
 <!-- Layouts -->
 
     <!-- Single Links Page -->
-    <style>
+    <div id="ajax_change1">
+  <div id="ajax_change2" style="transform:scale(0);">
+    
+  
+  <style>
     .md-links {
         min-height: calc(100% - 120px - 5pc - 6em);
         text-align: center;
@@ -811,6 +819,8 @@ $(document).ready(function(){
     });
 </script>
 
+        </div>
+</div>
 
 
 
@@ -836,10 +846,12 @@ $(document).ready(function(){
         </span>
     </button>
 
-    <!-- Sidebar Avatar -->
+	<!--
+    <!-- Sidebar Avatar 
     <div class="sidebar-image">
         <img src="/img/avatar.jpg" alt="SunWeixiao's avatar">
     </div>
+	-->
 
     <!-- Sidebar Email -->
     <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
@@ -892,7 +904,7 @@ $(document).ready(function(){
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">7</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -910,7 +922,7 @@ $(document).ready(function(){
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/technology/">技术向<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/notebook/">笔记本<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/tomyself/">自言语<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/thinking/">随想集<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/events/">记事簿<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -1105,7 +1117,7 @@ It will not impact the appearance and can give developers a lot of support :)
 </div>
 
                     <!--Footer-->
-<footer class="mdl-mini-footer" id="bottom" style="display:none;">
+<footer class="mdl-mini-footer" id="bottom" style="display:none;position: absolute; bottom: 0;">
     
         <!-- Paradox Footer Left Section -->
         <div class="mdl-mini-footer--left-section sns-list">

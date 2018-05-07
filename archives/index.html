@@ -78,7 +78,7 @@
     <!-- Import CSS -->
     
         <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?D6hjv31W+IVw/OMyTb4mHQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?oSnDTsfblaZ8MM47LREMyA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?0+hlbg3002x0J1VYVxhkyg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
         
             
@@ -448,7 +448,10 @@ $(document).ready(function(){
                 if($("#ajax_change2").hasClass("material-index")){
                     $("#ajax_change2")[0].style.transform="scale(0)";
                 }
-                if($("#ajax_change2").hasClass("material-post_container")){
+                else if($("#ajax_change2").hasClass("material-post_container")){
+                    $("#ajax_change2")[0].style.opacity=0;
+                }
+                else{
                     $("#ajax_change2")[0].style.opacity=0;
                 }
                 setTimeout(function(){
@@ -461,7 +464,6 @@ $(document).ready(function(){
             complete: function () {   
             },  
             success:function(result){  
-
                     var doc = (new DOMParser()).parseFromString(result,"text/html");
                     var k = doc.getElementById("ajax_change2");
                     var b = doc.getElementById("post-toc-trigger-btn-");
@@ -522,7 +524,10 @@ $(document).ready(function(){
                 if($("#ajax_change2").hasClass("material-index")){
                     $("#ajax_change2")[0].style.transform="scale(0)";
                 }
-                if($("#ajax_change2").hasClass("material-post_container")){
+                else if($("#ajax_change2").hasClass("material-post_container")){
+                    $("#ajax_change2")[0].style.opacity=0;
+                }
+                else{
                     $("#ajax_change2")[0].style.opacity=0;
                 }
                 setTimeout(function(){
@@ -545,7 +550,6 @@ $(document).ready(function(){
                     var new_title = doc.title;
                     document.title = new_title;
                     $("#ajax_change1").append(k);
-                    
                     if(ob){
                         ob.remove();
                         obc.remove();
@@ -557,7 +561,7 @@ $(document).ready(function(){
                     
                     var state = {url:y, title: new_title};
                     window.history.pushState(state, new_title, y);
-                    dosomething_ys();
+                    dosomething_ys();                 
                     MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
                     if (y.indexOf("/posts") != -1){
                         var gitalk = new Gitalk({
@@ -705,375 +709,39 @@ $(document).ready(function(){
         
             
                 <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--6dp mdl-cell mdl-cell--6-col fade my_button" link="/posts/7/" style="height:360px;">
+                <div class="post_entry-module mdl-card mdl-shadow--6dp mdl-cell mdl-cell--6-col fade my_button" link="/posts/hello-world/" style="height:360px;">
     <!-- Post Thumbnail -->
     
         <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy my_button" link="/posts/7/" style="padding:0px;background-image:url('/image/4.jpg');" data-original="/image/4.jpg">
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy my_button" link="/posts/hello-world/" style="padding:0px;background-image:url('https://picture-1256084113.cos.ap-beijing.myqcloud.com/thumbnail/65596679_p0.png');" data-original="https://picture-1256084113.cos.ap-beijing.myqcloud.com/thumbnail/65596679_p0.png">
     
 
         <!-- Post Title -->
-        <p class="article-headline-p mdl-card__title mdl-color-text--grey-50 my_button" link="/posts/7/" style="background-color:#969696;background-color:rgba(46,46,46,0.5);no-repeat;backgroud-size:cover;height:50px;font-size: 1.4rem;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';">P站图片爬虫 Pixiv-Spider</p>
+        <p class="article-headline-p mdl-card__title mdl-color-text--grey-50 my_button" link="/posts/hello-world/" style="background-color:#969696;background-color:rgba(46,46,46,0.5);no-repeat;backgroud-size:cover;height:50px;font-size: 1.4rem;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';">你好，世界！</p>
     </div>
 
     <!-- Post Excerpt -->
     <div class="mdl-color-text--grey-700 mdl-card__actions post_entry-content my_button" style="font-size:1.05rem;padding:0px;height:96px;">
-		<p class="mdl-card__supporting-text mdl-color-text--grey-700 my_button" link="/posts/7/" style="font-size:1rem;display:block;padding:12px 16px;height:96px;border-radius: 0px;line-height: 24px;text-align:left;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';text-transform: none;">
+		<p class="mdl-card__supporting-text mdl-color-text--grey-700 my_button" link="/posts/hello-world/" style="font-size:1rem;display:block;padding:12px 16px;height:96px;border-radius: 0px;line-height: 24px;text-align:left;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';text-transform: none;">
         
-            最近因为工作的原因，接触 Nodejs 也愈加多了起来，从搭建 koa2 后台服务器，到 PM2 管理各种服务进程，虽然期间踩了不少坑也勉强过来了，作为练手写了个P站图片爬虫。
+            &emsp; &emsp; 多年以后，面对荒废的小站，swx将会回想起见识到互联网缤纷多彩的角落的那个遥远的下午。
         
 		</p>
 
     </div>
     <!-- Post_entry Info-->
     <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__actions meta mdl-color-text--grey-500 my_button" link="/posts/7/" style="font-size:1.05rem;height:44px;padding:0px;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';">
-		<div class="mdl-actions mdl-color-text--grey-500 my_button" style="margin-right:0px;padding:12px 0px 12px 16px;height:44px;border-radius: 0px;line-height: 20px;text-align:left;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';text-transform: none;" href="/posts/7/" target="_self">
+        <div id="post_entry-left-info" class="mdl-card__actions meta mdl-color-text--grey-500 my_button" link="/posts/hello-world/" style="font-size:1.05rem;height:44px;padding:0px;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';">
+		<div class="mdl-actions mdl-color-text--grey-500 my_button" style="margin-right:0px;padding:12px 0px 12px 16px;height:44px;border-radius: 0px;line-height: 20px;text-align:left;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';text-transform: none;" href="/posts/hello-world/" target="_self">
             <!-- Author Avatar -->
 			<span><b>
-            <span> <i class="fa fa-clock"></i>&nbsp2018-02-09&nbsp&nbsp</span>
+            <span> <i class="fa fa-clock"></i>&nbsp2018-05-06&nbsp&nbsp</span>
           
               <!-- Category -->
               <span class="post_entry-category">
 			  <i class="fa fa-bookmark"></i>
-                  <a class="sidebar_archives-link" href="/categories/thinking/">随想集</a>
+                  <a class="sidebar_archives-link" href="/categories/events/">记事簿</a>
             
-                </span>&nbsp
-				
-			  
-			  </b>
-			  </span>
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-			</div>
-        </div>
-    </div>
-</div>
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--6dp mdl-cell mdl-cell--6-col fade my_button" link="/posts/6/" style="height:360px;">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy my_button" link="/posts/6/" style="padding:0px;background-image:url('/image/9.jpg');" data-original="/image/9.jpg">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p mdl-card__title mdl-color-text--grey-50 my_button" link="/posts/6/" style="background-color:#969696;background-color:rgba(46,46,46,0.5);no-repeat;backgroud-size:cover;height:50px;font-size: 1.4rem;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';">新看板娘 Tia の改造记事</p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-700 mdl-card__actions post_entry-content my_button" style="font-size:1.05rem;padding:0px;height:96px;">
-		<p class="mdl-card__supporting-text mdl-color-text--grey-700 my_button" link="/posts/6/" style="font-size:1rem;display:block;padding:12px 16px;height:96px;border-radius: 0px;line-height: 24px;text-align:left;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';text-transform: none;">
-        
-            最近 Pio 大有泛滥之势，惨象已使我目不忍视了，或许这其中与我有些干系 ，毕竟当初偷师后流出了一大批模型，但我还有什么话可说呢，好吧已无它法，来加个美美哒新老婆 Tia 吧。
-        
-		</p>
-
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__actions meta mdl-color-text--grey-500 my_button" link="/posts/6/" style="font-size:1.05rem;height:44px;padding:0px;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';">
-		<div class="mdl-actions mdl-color-text--grey-500 my_button" style="margin-right:0px;padding:12px 0px 12px 16px;height:44px;border-radius: 0px;line-height: 20px;text-align:left;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';text-transform: none;" href="/posts/6/" target="_self">
-            <!-- Author Avatar -->
-			<span><b>
-            <span> <i class="fa fa-clock"></i>&nbsp2018-02-08&nbsp&nbsp</span>
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-			  <i class="fa fa-bookmark"></i>
-                  <a class="sidebar_archives-link" href="/categories/notebook/">笔记本</a>
-            
-                </span>&nbsp
-				
-			  
-			  </b>
-			  </span>
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-			</div>
-        </div>
-    </div>
-</div>
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--6dp mdl-cell mdl-cell--6-col fade my_button" link="/posts/1/" style="height:360px;">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy my_button" link="/posts/1/" style="padding:0px;background-image:url('/image/sl.jpg');" data-original="/image/sl.jpg">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p mdl-card__title mdl-color-text--grey-50 my_button" link="/posts/1/" style="background-color:#969696;background-color:rgba(46,46,46,0.5);no-repeat;backgroud-size:cover;height:50px;font-size: 1.4rem;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';">Vim 哲思</p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-700 mdl-card__actions post_entry-content my_button" style="font-size:1.05rem;padding:0px;height:96px;">
-		<p class="mdl-card__supporting-text mdl-color-text--grey-700 my_button" link="/posts/1/" style="font-size:1rem;display:block;padding:12px 16px;height:96px;border-radius: 0px;line-height: 24px;text-align:left;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';text-transform: none;">
-        
-            说起来惭愧，作为一个程序员怎能不懂 Vim，一直以来对 Vim 只是略知皮毛，目前也只在编辑小文本时偶尔用到。当初几次尝试使用 Vim 都感觉刻意使用反而增加了负担，拖慢了效率。
-        
-		</p>
-
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__actions meta mdl-color-text--grey-500 my_button" link="/posts/1/" style="font-size:1.05rem;height:44px;padding:0px;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';">
-		<div class="mdl-actions mdl-color-text--grey-500 my_button" style="margin-right:0px;padding:12px 0px 12px 16px;height:44px;border-radius: 0px;line-height: 20px;text-align:left;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';text-transform: none;" href="/posts/1/" target="_self">
-            <!-- Author Avatar -->
-			<span><b>
-            <span> <i class="fa fa-clock"></i>&nbsp2018-02-08&nbsp&nbsp</span>
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-			  <i class="fa fa-bookmark"></i>
-                  <a class="sidebar_archives-link" href="/categories/technology/">技术向</a>
-            
-                </span>&nbsp
-				
-				    <span class="post-tag">
-						<i class="fa fa-tag"></i>
-						<span>
-							<ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据库/">数据库</a></li></ul>
-						</span>
-					</span>
-				
-			  
-			  </b>
-			  </span>
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-			</div>
-        </div>
-    </div>
-</div>
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--6dp mdl-cell mdl-cell--6-col fade my_button" link="/posts/2/" style="height:360px;">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy my_button" link="/posts/2/" style="padding:0px;background-image:url('/image/0.jpg');" data-original="/image/0.jpg">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p mdl-card__title mdl-color-text--grey-50 my_button" link="/posts/2/" style="background-color:#969696;background-color:rgba(46,46,46,0.5);no-repeat;backgroud-size:cover;height:50px;font-size: 1.4rem;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';">RN App 唤醒踩坑记</p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-700 mdl-card__actions post_entry-content my_button" style="font-size:1.05rem;padding:0px;height:96px;">
-		<p class="mdl-card__supporting-text mdl-color-text--grey-700 my_button" link="/posts/2/" style="font-size:1rem;display:block;padding:12px 16px;height:96px;border-radius: 0px;line-height: 24px;text-align:left;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';text-transform: none;">
-        
-            最近接手的新项目需要实现链接分享功能，然后通过分享的链接唤醒 App 并进行页面跳转，需要同时兼容 iOS 和 Android，不幸这趟坑就让我踩了， 那就只能拥抱新技术吧。
-        
-		</p>
-
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__actions meta mdl-color-text--grey-500 my_button" link="/posts/2/" style="font-size:1.05rem;height:44px;padding:0px;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';">
-		<div class="mdl-actions mdl-color-text--grey-500 my_button" style="margin-right:0px;padding:12px 0px 12px 16px;height:44px;border-radius: 0px;line-height: 20px;text-align:left;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';text-transform: none;" href="/posts/2/" target="_self">
-            <!-- Author Avatar -->
-			<span><b>
-            <span> <i class="fa fa-clock"></i>&nbsp2018-02-07&nbsp&nbsp</span>
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-			  <i class="fa fa-bookmark"></i>
-                  <a class="sidebar_archives-link" href="/categories/tomyself/">自言语</a>
-            
-                </span>&nbsp
-				
-				    <span class="post-tag">
-						<i class="fa fa-tag"></i>
-						<span>
-							<ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/标签0/">标签0</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/标签1/">标签1</a></li></ul>
-						</span>
-					</span>
-				
-			  
-			  </b>
-			  </span>
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-			</div>
-        </div>
-    </div>
-</div>
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--6dp mdl-cell mdl-cell--6-col fade my_button" link="/posts/5/" style="height:360px;">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy my_button" link="/posts/5/" style="padding:0px;background-image:url('/image/2.jpg');" data-original="/image/2.jpg">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p mdl-card__title mdl-color-text--grey-50 my_button" link="/posts/5/" style="background-color:#969696;background-color:rgba(46,46,46,0.5);no-repeat;backgroud-size:cover;height:50px;font-size: 1.4rem;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';">本地文件插入测试</p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-700 mdl-card__actions post_entry-content my_button" style="font-size:1.05rem;padding:0px;height:96px;">
-		<p class="mdl-card__supporting-text mdl-color-text--grey-700 my_button" link="/posts/5/" style="font-size:1rem;display:block;padding:12px 16px;height:96px;border-radius: 0px;line-height: 24px;text-align:left;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';text-transform: none;">
-        
-            图片0图片1
-        
-		</p>
-
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__actions meta mdl-color-text--grey-500 my_button" link="/posts/5/" style="font-size:1.05rem;height:44px;padding:0px;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';">
-		<div class="mdl-actions mdl-color-text--grey-500 my_button" style="margin-right:0px;padding:12px 0px 12px 16px;height:44px;border-radius: 0px;line-height: 20px;text-align:left;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';text-transform: none;" href="/posts/5/" target="_self">
-            <!-- Author Avatar -->
-			<span><b>
-            <span> <i class="fa fa-clock"></i>&nbsp2018-02-07&nbsp&nbsp</span>
-          
-                </span>&nbsp
-				
-			  
-			  </b>
-			  </span>
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-			</div>
-        </div>
-    </div>
-</div>
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--6dp mdl-cell mdl-cell--6-col fade my_button" link="/posts/4/" style="height:360px;">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy my_button" link="/posts/4/" style="padding:0px;background-image:url('/image/5.jpg');" data-original="/image/5.jpg">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p mdl-card__title mdl-color-text--grey-50 my_button" link="/posts/4/" style="background-color:#969696;background-color:rgba(46,46,46,0.5);no-repeat;backgroud-size:cover;height:50px;font-size: 1.4rem;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';">草稿</p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-700 mdl-card__actions post_entry-content my_button" style="font-size:1.05rem;padding:0px;height:96px;">
-		<p class="mdl-card__supporting-text mdl-color-text--grey-700 my_button" link="/posts/4/" style="font-size:1rem;display:block;padding:12px 16px;height:96px;border-radius: 0px;line-height: 24px;text-align:left;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';text-transform: none;">
-        
-            这是一篇草稿发表的实验
-
-        
-		</p>
-
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__actions meta mdl-color-text--grey-500 my_button" link="/posts/4/" style="font-size:1.05rem;height:44px;padding:0px;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';">
-		<div class="mdl-actions mdl-color-text--grey-500 my_button" style="margin-right:0px;padding:12px 0px 12px 16px;height:44px;border-radius: 0px;line-height: 20px;text-align:left;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';text-transform: none;" href="/posts/4/" target="_self">
-            <!-- Author Avatar -->
-			<span><b>
-            <span> <i class="fa fa-clock"></i>&nbsp2018-02-07&nbsp&nbsp</span>
-          
-                </span>&nbsp
-				
-			  
-			  </b>
-			  </span>
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-			</div>
-        </div>
-    </div>
-</div>
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--6dp mdl-cell mdl-cell--6-col fade my_button" link="/posts/3/" style="height:360px;">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy my_button" link="/posts/3/" style="padding:0px;background-image:url('/image/8.png');" data-original="/image/8.png">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p mdl-card__title mdl-color-text--grey-50 my_button" link="/posts/3/" style="background-color:#969696;background-color:rgba(46,46,46,0.5);no-repeat;backgroud-size:cover;height:50px;font-size: 1.4rem;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';">测试页面 Hello World!</p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-700 mdl-card__actions post_entry-content my_button" style="font-size:1.05rem;padding:0px;height:96px;">
-		<p class="mdl-card__supporting-text mdl-color-text--grey-700 my_button" link="/posts/3/" style="font-size:1rem;display:block;padding:12px 16px;height:96px;border-radius: 0px;line-height: 24px;text-align:left;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';text-transform: none;">
-        
-            这是大标题这是中标题
-        
-		</p>
-
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__actions meta mdl-color-text--grey-500 my_button" link="/posts/3/" style="font-size:1.05rem;height:44px;padding:0px;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';">
-		<div class="mdl-actions mdl-color-text--grey-500 my_button" style="margin-right:0px;padding:12px 0px 12px 16px;height:44px;border-radius: 0px;line-height: 20px;text-align:left;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif';text-transform: none;" href="/posts/3/" target="_self">
-            <!-- Author Avatar -->
-			<span><b>
-            <span> <i class="fa fa-clock"></i>&nbsp2018-02-07&nbsp&nbsp</span>
-          
                 </span>&nbsp
 				
 			  
@@ -1138,10 +806,12 @@ $(document).ready(function(){
         </span>
     </button>
 
-    <!-- Sidebar Avatar -->
+	<!--
+    <!-- Sidebar Avatar 
     <div class="sidebar-image">
         <img src="/img/avatar.jpg" alt="SunWeixiao's avatar">
     </div>
+	-->
 
     <!-- Sidebar Email -->
     <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
@@ -1194,7 +864,7 @@ $(document).ready(function(){
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">7</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -1212,7 +882,7 @@ $(document).ready(function(){
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/technology/">技术向<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/notebook/">笔记本<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/tomyself/">自言语<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/thinking/">随想集<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/events/">记事簿<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -1415,7 +1085,7 @@ It will not impact the appearance and can give developers a lot of support :)
 </div>
 
                     <!--Footer-->
-<footer class="mdl-mini-footer" id="bottom" style="display:none;">
+<footer class="mdl-mini-footer" id="bottom" style="display:none;position: absolute; bottom: 0;">
     
         <!-- Paradox Footer Left Section -->
         <div class="mdl-mini-footer--left-section sns-list">
