@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="&amp;emsp; &amp;emsp; 多年以后，面对荒废的小站，swx将会回想起见识到互联网缤纷多彩的角落的那个遥远的下午。">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",Hello,world!">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -236,11 +236,11 @@
     <meta property="og:title" content="你好，世界！ | Sun">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="&amp;emsp; &amp;emsp; 多年以后，面对荒废的小站，swx将会回想起见识到互联网缤纷多彩的角落的那个遥远的下午。">
-    
+    <meta property="og:article:tag" content="Hello,world!"> 
 
     
-        <meta property="article:published_time" content="Sun May 06 2018 23:13:38 GMT+0800">
-        <meta property="article:modified_time" content="Tue May 08 2018 00:04:15 GMT+0800">
+        <meta property="article:published_time" content="Tue May 08 2018 00:08:38 GMT+0800">
+        <meta property="article:modified_time" content="Tue May 08 2018 00:09:01 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,8 +262,8 @@
     "@type": "BlogPosting",
     "mainEntityOfPage": "http://sunweixiao.com/posts/hello-world/index.html",
     "headline": "你好，世界！",
-    "datePublished": "Sun May 06 2018 23:13:38 GMT+0800",
-    "dateModified": "Tue May 08 2018 00:04:15 GMT+0800",
+    "datePublished": "Tue May 08 2018 00:08:38 GMT+0800",
+    "dateModified": "Tue May 08 2018 00:09:01 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "SunWeixiao",
@@ -281,7 +281,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": "",
+    "keywords": ",Hello,world!",
     "description": "&amp;emsp; &amp;emsp; 多年以后，面对荒废的小站，swx将会回想起见识到互联网缤纷多彩的角落的那个遥远的下午。",
 }
 </script>
@@ -786,11 +786,18 @@ $(document).ready(function(){
 
 			<div class="article-headline-p mdl-supporting__text mdl-color-text--grey-50" style="line-height:40px;padding:12px 16px;background-color:#969696;background-color:rgba(46,46,46,0.5);no-repeat;width:100%;font-size: 1.4rem;font-family:'Iosevka', 'PingFang SC', 'Microsoft YaHei', 'sans-serif'">
 				<div>你好，世界！</div>
-				<div style="font-size: 1.1rem;line-height:20px;"><i class="fa fa-clock"></i>&nbsp2018-05-06&nbsp&nbsp
+				<div style="font-size: 1.1rem;line-height:20px;"><i class="fa fa-clock"></i>&nbsp2018-05-08&nbsp&nbsp
 			        <span class="page-category">
 					<i class="fa fa-bookmark"></i>
 	                  <a class="sidebar_archives-link" href="/categories/events/">记事簿</a>&nbsp&nbsp
 					</span>
+					
+				        <span class="page-tag">
+							<i class="fa fa-tag"></i>
+							<span>
+								<ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hello-world/">Hello,world!</a></li></ul>
+							</span>
+						</span>
 					
 				</div>
 			</div>
@@ -839,7 +846,7 @@ $(document).ready(function(){
 <h4 id="其他配置"><a href="#其他配置" class="headerlink" title="其他配置"></a><strong>其他配置</strong></h4><p>&emsp; &emsp; 目前图床用的是<code>腾讯云</code>。免费额度有50G空间和10G流量，如果没被盗链的话，对这个小站应该是够了。<br>&emsp; &emsp; DNS也是在<code>腾讯云</code>。不得不说腾讯在这方面还是蛮良心的，对免费用户有很大的吸引力。<br>&emsp; &emsp; 统计功能使用<code>百度统计</code>，主要是因为<code>Google Analytics</code>在国内太不稳定了。</p>
 <h4 id="插件相关"><a href="#插件相关" class="headerlink" title="插件相关"></a><strong>插件相关</strong></h4><p>&emsp; &emsp; 背景插件为<code>backstretch</code>，<a href="https://github.com/jquery-backstretch/jquery-backstretch" target="_blank" rel="noopener">链接</a><br>&emsp; &emsp; 音乐插件为<code>SKPlayer</code>，<a href="https://github.com/wangpengfei15975/skPlayer" target="_blank" rel="noopener">链接</a><br>&emsp; &emsp; 公式插件为<code>Mathjax</code>，<a href="https://www.mathjax.org/" target="_blank" rel="noopener">链接</a><br>&emsp; &emsp; 图标库为<code>fontawesome</code>，<a href="https://fontawesome.com/" target="_blank" rel="noopener">链接</a></p>
 <h4 id="评论系统"><a href="#评论系统" class="headerlink" title="评论系统"></a><strong>评论系统</strong></h4><p>&emsp; &emsp; 评论系统使用<code>Gitalk</code>，<a href="https://github.com/gitalk/gitalk" target="_blank" rel="noopener">链接</a>。需要用GitHub账号登陆才能评论。评论可以使用<code>markdown</code>语法，支持包括插入图片等操作。</p>
-<h4 id="ajax-pushstate"><a href="#ajax-pushstate" class="headerlink" title="ajax+pushstate"></a><strong>ajax+pushstate</strong></h4><p>&emsp; &emsp; 为了使跳转界面时无刷新，只改变必须改变的部分，一个解决方案是<code>pjax</code>。但我在配置的时候总有莫名奇妙的BUG。因此只好手动<code>ajax</code>异步获取+<code>pushstate</code>改变浏览记录及URL。可以说，一切跳转动画全部建立在不刷新的基础之上，因此这个技术尤其重要。</p>
+<h4 id="ajax-pushstate"><a href="#ajax-pushstate" class="headerlink" title="ajax+pushstate"></a><strong>ajax+pushstate</strong></h4><p>&emsp; &emsp; 为了使跳转界面时无刷新，只改变必须改变的部分，一个解决方案是<code>pjax</code>。但我在配置的时候总有莫名奇妙的BUG。因此只好手动<code>ajax</code>异步获取+<code>pushstate</code>改变浏览记录及URL。可以说，一切跳转动画及背景音乐的连续性全部建立在不刷新的基础之上，因此这个技术尤为重要。</p>
 <h4 id="一个取色网站"><a href="#一个取色网站" class="headerlink" title="一个取色网站"></a><strong>一个取色网站</strong></h4><p>&emsp; &emsp; 这里推荐一个取色网站：<a href="http://nipponcolors.com/" target="_blank" rel="noopener">日本の伝統色</a>。这里多是一些比较古典、传统、带有日本风情的颜色。本站大部分颜色都取自于这里。可惜我并没有网页配色的经验，只能凭感觉胡乱配一通。有需要的小伙伴可以取走好好玩一玩。</p>
 <h3 id="ToDo"><a href="#ToDo" class="headerlink" title="  ToDo"></a><i class="fa fa-fire" aria-hidden="true"></i>  ToDo</h3><p>还有些非常想实现的功能因为时间原因不能及时上线了。于是将这些功能列在下面，留作提醒。</p>
 <ul>
