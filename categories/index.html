@@ -740,9 +740,9 @@ $(document).ready(function(){
   
   
   <!--skplayer-->
-  <script src="/js/skPlayer.min.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <script src="/js/skPlayer.min.js"></script>
 
-   
+<link rel="stylesheet" href="/css/shuoshuo.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
   
   
@@ -770,7 +770,6 @@ $(document).ready(function(){
 
                     <!-- Post TOC -->
 
-
 <!-- Layouts -->
 
     <!-- Post Module -->
@@ -786,7 +785,7 @@ $(document).ready(function(){
     
         
             <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50" style="display:none;">
             <script type="text/ls-javascript" id="post-thumbnail-script">
     var randomNum = Math.floor(Math.random() * 19 + 1);
 
@@ -1059,11 +1058,21 @@ onClick: false
             </ul>
         </li>
         
-            <li class="divider"></li>
-        
     
 
     <!-- Pages  -->
+    
+        <li>
+            <a href="/shuoshuo" title="说说">
+                
+                    <i class="material-icons sidebar-material-icons">rate_review</i>
+                
+                说说
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
     
         <li>
             <a href="/timeline" title="时间轴">
